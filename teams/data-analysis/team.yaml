@@ -5,6 +5,7 @@ short_description: Summarize pasted tables or CSV snippets into findings, caveat
 canonical_url: https://botshelfvampire.com/library/teams/data-analysis/
 license: free-use-at-own-risk
 last_updated: 2026-09-08
+source_commit: eb87e8e049fdf9908e438305ff827c7b617505b5
 inputs:
   - pasted table or CSV snippet
 outputs:

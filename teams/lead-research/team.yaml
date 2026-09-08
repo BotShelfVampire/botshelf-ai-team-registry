@@ -5,6 +5,7 @@ short_description: Build a respectful lead brief from public facts you paste —
 canonical_url: https://botshelfvampire.com/library/teams/lead-research/
 license: free-use-at-own-risk
 last_updated: 2026-09-08
+source_commit: eb87e8e049fdf9908e438305ff827c7b617505b5
 inputs:
   - public facts you paste
 outputs:

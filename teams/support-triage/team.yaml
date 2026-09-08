@@ -5,6 +5,7 @@ short_description: Classify an inbound message, propose a first reply hold, and 
 canonical_url: https://botshelfvampire.com/library/teams/support-triage/
 license: free-use-at-own-risk
 last_updated: 2026-09-08
+source_commit: eb87e8e049fdf9908e438305ff827c7b617505b5
 inputs:
   - inbound message paste
 outputs:

@@ -5,6 +5,7 @@ short_description: Turn a fuzzy question into a sourced research brief with open
 canonical_url: https://botshelfvampire.com/library/teams/deep-research/
 license: free-use-at-own-risk
 last_updated: 2026-09-08
+source_commit: eb87e8e049fdf9908e438305ff827c7b617505b5
 inputs:
   - fuzzy question
   - labeled source pastes (optional)
