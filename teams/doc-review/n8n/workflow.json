@@ -1,0 +1,81 @@
+{
+  "name": "BotShelf Library \u2014 Doc Review",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "1",
+      "name": "Manual Trigger",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "system",
+              "value": "You are a documentation reviewer. Goal: ship-ready clarity check.\n\nRULES:\n- Flag broken promises, missing prerequisites, and unsafe copy-paste.\n- Do not invent product features.\n- Prefer concrete edits over vague \u201cimprove clarity\u201d.\n\nOUTPUT:\n1) Pass/fail for publish\n2) Blockers\n3) Line-level edit suggestions\n4) Prerequisites still missing\u2026"
+            },
+            {
+              "name": "user_input",
+              "value": "={{$json.input}}"
+            }
+          ]
+        }
+      },
+      "id": "2",
+      "name": "Prepare Prompt",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3,
+      "position": [
+        260,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "notice": "Attach your own local LLM node (Ollama/LM Studio HTTP). Do not enable billing cloud nodes without a human budget check."
+      },
+      "id": "3",
+      "name": "LLM Placeholder",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        520,
+        0
+      ]
+    }
+  ],
+  "connections": {
+    "Manual Trigger": {
+      "main": [
+        [
+          {
+            "node": "Prepare Prompt",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare Prompt": {
+      "main": [
+        [
+          {
+            "node": "LLM Placeholder",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "meta": {
+    "botshelf_job": "doc-review",
+    "safety": "manual-trigger-only"
+  }
+}

@@ -1,0 +1,55 @@
+team_id: personal-assistant
+title: Personal Assistant
+category: Productivity
+short_description: Daily capture → prioritized plan with stop rules. Local-first; does not spend money or send mail alone.
+canonical_url: https://botshelfvampire.com/library/teams/personal-assistant/
+license: free-use-at-own-risk
+last_updated: 2026-09-08
+inputs:
+  - daily capture notes
+outputs:
+  - prioritized plan
+  - stop rules
+implementations:
+  - implementation_id: crewai/personal-assistant
+    platform: CrewAI
+    runtime: crewai
+    status: Untested
+    botshelf_url: https://botshelfvampire.com/library/crewai/personal-assistant/
+    github_path: teams/personal-assistant/crewai
+  - implementation_id: langgraph/personal-assistant
+    platform: LangGraph
+    runtime: langgraph
+    status: Untested
+    botshelf_url: https://botshelfvampire.com/library/langgraph/personal-assistant/
+    github_path: teams/personal-assistant/langgraph
+  - implementation_id: lm-studio/personal-assistant
+    platform: LM Studio
+    runtime: lm-studio
+    status: Untested
+    botshelf_url: https://botshelfvampire.com/library/lm-studio/personal-assistant/
+    github_path: teams/personal-assistant/lm-studio
+  - implementation_id: mcp/personal-assistant
+    platform: MCP
+    runtime: mcp
+    status: Untested
+    botshelf_url: https://botshelfvampire.com/library/mcp/personal-assistant/
+    github_path: teams/personal-assistant/mcp
+  - implementation_id: n8n/personal-assistant
+    platform: n8n
+    runtime: n8n
+    status: Untested
+    botshelf_url: https://botshelfvampire.com/library/n8n/personal-assistant/
+    github_path: teams/personal-assistant/n8n
+  - implementation_id: ollama/personal-assistant
+    platform: Ollama
+    runtime: ollama
+    status: Untested
+    botshelf_url: https://botshelfvampire.com/library/ollama/personal-assistant/
+    github_path: teams/personal-assistant/ollama
+  - implementation_id: open-webui/personal-assistant
+    platform: Open WebUI
+    runtime: open-webui
+    status: Untested
+    botshelf_url: https://botshelfvampire.com/library/open-webui/personal-assistant/
+    github_path: teams/personal-assistant/open-webui

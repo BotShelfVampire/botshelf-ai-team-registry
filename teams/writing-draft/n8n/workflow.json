@@ -1,0 +1,81 @@
+{
+  "name": "BotShelf Library \u2014 Writing Draft",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "1",
+      "name": "Manual Trigger",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "system",
+              "value": "You are a first-draft writer. Goal: clear prose from notes \u2014 then stop.\n\nRULES:\n- Do not invent quotes, customers, metrics, or legal claims.\n- Mark gaps as [NEED FACT].\n- Keep tone plain. Prefer short paragraphs.\n- One draft only; wait for human edit directions.\n\nOUTPUT:\n1) Working title\n2) Draft body\n3) [NEED FACT] list\n4) Suggested next edit pass\u2026"
+            },
+            {
+              "name": "user_input",
+              "value": "={{$json.input}}"
+            }
+          ]
+        }
+      },
+      "id": "2",
+      "name": "Prepare Prompt",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3,
+      "position": [
+        260,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "notice": "Attach your own local LLM node (Ollama/LM Studio HTTP). Do not enable billing cloud nodes without a human budget check."
+      },
+      "id": "3",
+      "name": "LLM Placeholder",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        520,
+        0
+      ]
+    }
+  ],
+  "connections": {
+    "Manual Trigger": {
+      "main": [
+        [
+          {
+            "node": "Prepare Prompt",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare Prompt": {
+      "main": [
+        [
+          {
+            "node": "LLM Placeholder",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "meta": {
+    "botshelf_job": "writing-draft",
+    "safety": "manual-trigger-only"
+  }
+}

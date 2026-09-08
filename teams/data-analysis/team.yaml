@@ -1,0 +1,56 @@
+team_id: data-analysis
+title: Data Analysis
+category: Analytics
+short_description: Summarize pasted tables or CSV snippets into findings, caveats, and what to check next. Analysis only.
+canonical_url: https://botshelfvampire.com/library/teams/data-analysis/
+license: free-use-at-own-risk
+last_updated: 2026-09-08
+inputs:
+  - pasted table or CSV snippet
+outputs:
+  - findings
+  - caveats
+  - next checks
+implementations:
+  - implementation_id: crewai/data-analysis
+    platform: CrewAI
+    runtime: crewai
+    status: Untested
+    botshelf_url: https://botshelfvampire.com/library/crewai/data-analysis/
+    github_path: teams/data-analysis/crewai
+  - implementation_id: langgraph/data-analysis
+    platform: LangGraph
+    runtime: langgraph
+    status: Untested
+    botshelf_url: https://botshelfvampire.com/library/langgraph/data-analysis/
+    github_path: teams/data-analysis/langgraph
+  - implementation_id: lm-studio/data-analysis
+    platform: LM Studio
+    runtime: lm-studio
+    status: Untested
+    botshelf_url: https://botshelfvampire.com/library/lm-studio/data-analysis/
+    github_path: teams/data-analysis/lm-studio
+  - implementation_id: mcp/data-analysis
+    platform: MCP
+    runtime: mcp
+    status: Untested
+    botshelf_url: https://botshelfvampire.com/library/mcp/data-analysis/
+    github_path: teams/data-analysis/mcp
+  - implementation_id: n8n/data-analysis
+    platform: n8n
+    runtime: n8n
+    status: Untested
+    botshelf_url: https://botshelfvampire.com/library/n8n/data-analysis/
+    github_path: teams/data-analysis/n8n
+  - implementation_id: ollama/data-analysis
+    platform: Ollama
+    runtime: ollama
+    status: Untested
+    botshelf_url: https://botshelfvampire.com/library/ollama/data-analysis/
+    github_path: teams/data-analysis/ollama
+  - implementation_id: open-webui/data-analysis
+    platform: Open WebUI
+    runtime: open-webui
+    status: Untested
+    botshelf_url: https://botshelfvampire.com/library/open-webui/data-analysis/
+    github_path: teams/data-analysis/open-webui

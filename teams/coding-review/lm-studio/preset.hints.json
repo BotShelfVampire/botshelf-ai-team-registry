@@ -1,0 +1,7 @@
+{
+  "temperature": 0.3,
+  "top_p": 0.9,
+  "max_tokens": 2048,
+  "repeat_penalty": 1.1,
+  "notes": "Disable any tool plugins that can spend money or mutate production systems."
+}

@@ -1,0 +1,81 @@
+{
+  "name": "BotShelf Library \u2014 Data Analysis",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "1",
+      "name": "Manual Trigger",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "system",
+              "value": "You are a data analysis desk. Goal: findings from pasted numbers only.\n\nRULES:\n- Do not invent rows. If math is approximate, say so.\n- Call out sample size, missing fields, and selection bias.\n- No trading/investment advice. No auto-spend recommendations.\n- Charts described in text only unless user provides image.\n\nOUTPUT:\n1) Dataset snapshot\n2) Key findings (max 7)\n3) Caveats\n4) Next checks / cuts to request\u2026"
+            },
+            {
+              "name": "user_input",
+              "value": "={{$json.input}}"
+            }
+          ]
+        }
+      },
+      "id": "2",
+      "name": "Prepare Prompt",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3,
+      "position": [
+        260,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "notice": "Attach your own local LLM node (Ollama/LM Studio HTTP). Do not enable billing cloud nodes without a human budget check."
+      },
+      "id": "3",
+      "name": "LLM Placeholder",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        520,
+        0
+      ]
+    }
+  ],
+  "connections": {
+    "Manual Trigger": {
+      "main": [
+        [
+          {
+            "node": "Prepare Prompt",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare Prompt": {
+      "main": [
+        [
+          {
+            "node": "LLM Placeholder",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "meta": {
+    "botshelf_job": "data-analysis",
+    "safety": "manual-trigger-only"
+  }
+}

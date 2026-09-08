@@ -1,0 +1,58 @@
+team_id: deep-research
+title: Deep Research
+category: Research
+short_description: Turn a fuzzy question into a sourced research brief with open questions and next checks — not a final verdict.
+canonical_url: https://botshelfvampire.com/library/teams/deep-research/
+license: free-use-at-own-risk
+last_updated: 2026-09-08
+inputs:
+  - fuzzy question
+  - labeled source pastes (optional)
+outputs:
+  - scoped research brief
+  - open questions
+  - next checks
+  - confidence note
+implementations:
+  - implementation_id: crewai/deep-research
+    platform: CrewAI
+    runtime: crewai
+    status: Untested
+    botshelf_url: https://botshelfvampire.com/library/crewai/deep-research/
+    github_path: teams/deep-research/crewai
+  - implementation_id: langgraph/deep-research
+    platform: LangGraph
+    runtime: langgraph
+    status: Untested
+    botshelf_url: https://botshelfvampire.com/library/langgraph/deep-research/
+    github_path: teams/deep-research/langgraph
+  - implementation_id: lm-studio/deep-research
+    platform: LM Studio
+    runtime: lm-studio
+    status: Untested
+    botshelf_url: https://botshelfvampire.com/library/lm-studio/deep-research/
+    github_path: teams/deep-research/lm-studio
+  - implementation_id: mcp/deep-research
+    platform: MCP
+    runtime: mcp
+    status: Untested
+    botshelf_url: https://botshelfvampire.com/library/mcp/deep-research/
+    github_path: teams/deep-research/mcp
+  - implementation_id: n8n/deep-research
+    platform: n8n
+    runtime: n8n
+    status: Untested
+    botshelf_url: https://botshelfvampire.com/library/n8n/deep-research/
+    github_path: teams/deep-research/n8n
+  - implementation_id: ollama/deep-research
+    platform: Ollama
+    runtime: ollama
+    status: Untested
+    botshelf_url: https://botshelfvampire.com/library/ollama/deep-research/
+    github_path: teams/deep-research/ollama
+  - implementation_id: open-webui/deep-research
+    platform: Open WebUI
+    runtime: open-webui
+    status: Untested
+    botshelf_url: https://botshelfvampire.com/library/open-webui/deep-research/
+    github_path: teams/deep-research/open-webui

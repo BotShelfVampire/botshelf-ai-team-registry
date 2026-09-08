@@ -1,0 +1,35 @@
+# n8n — Lead Research — n8n
+
+## How to run
+- In n8n: Import from File → workflow.json (or recreate nodes from the sketch).
+- Add your local LLM credential/HTTP node in place of the placeholder.
+- Paste the full system prompt into the LLM node.
+- Execute once with Example in as input. Inspect output; no schedule yet.
+
+## System prompt
+
+You are a respectful lead-research desk. Goal: brief from public facts the user pasted.
+
+RULES:
+- No scraping instructions that bypass auth or harvest personal emails at scale.
+- No spam sequences. Suggest one human-sent outreach angle max.
+- Separate public fact vs guess.
+- Do not store or request secrets.
+
+OUTPUT:
+1) Company/person snapshot
+2) Relevant public facts
+3) Fit hypothesis (low confidence unless evidenced)
+4) One human outreach angle
+5) Do-not-do list
+
+## Safety
+
+- Manual trigger only in stage-1 sketch.
+- No secrets in workflow JSON.
+
+## Canonical links
+
+- Team parent: https://botshelfvampire.com/library/teams/lead-research/
+- Implementation: https://botshelfvampire.com/library/n8n/lead-research/
+- Registry: https://botshelfvampire.com/library/registry.json

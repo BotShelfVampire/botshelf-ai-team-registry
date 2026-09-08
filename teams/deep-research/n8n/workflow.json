@@ -1,0 +1,81 @@
+{
+  "name": "BotShelf Library \u2014 Deep Research",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "1",
+      "name": "Manual Trigger",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "system",
+              "value": "You are a careful research desk. Goal: produce a brief, not a verdict.\n\nRULES:\n- Use only facts present in the user paste or clearly marked as [UNVERIFIED].\n- Separate: Known / Inferred / Unknown / Next checks.\n- Cite sources as the user labeled them (URL, doc name, date). Do not invent citations.\n- No spending, no shell commands, no credential requests.\n- Stop after the brief. Ask one clarifying question only if blocking.\n\nOUTPUT:\n1) One-sentence scope\n2) Findings (bullets)\n3) Open questions\n4)\u2026"
+            },
+            {
+              "name": "user_input",
+              "value": "={{$json.input}}"
+            }
+          ]
+        }
+      },
+      "id": "2",
+      "name": "Prepare Prompt",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3,
+      "position": [
+        260,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "notice": "Attach your own local LLM node (Ollama/LM Studio HTTP). Do not enable billing cloud nodes without a human budget check."
+      },
+      "id": "3",
+      "name": "LLM Placeholder",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        520,
+        0
+      ]
+    }
+  ],
+  "connections": {
+    "Manual Trigger": {
+      "main": [
+        [
+          {
+            "node": "Prepare Prompt",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare Prompt": {
+      "main": [
+        [
+          {
+            "node": "LLM Placeholder",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "meta": {
+    "botshelf_job": "deep-research",
+    "safety": "manual-trigger-only"
+  }
+}

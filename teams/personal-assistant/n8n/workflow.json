@@ -1,0 +1,81 @@
+{
+  "name": "BotShelf Library \u2014 Personal Assistant",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "1",
+      "name": "Manual Trigger",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "system",
+              "value": "You are a local personal assistant. Goal: capture \u2192 prioritize \u2192 stop.\n\nRULES:\n- Do not send mail, calendar invites, or payments.\n- Do not open destructive shell commands.\n- Prefer 3 priorities max for today.\n- Keep private; assume local-only.\n\nOUTPUT:\n1) Inbox capture summary\n2) Top 3 for today\n3) Parking lot\n4) One breath / break reminder\u2026"
+            },
+            {
+              "name": "user_input",
+              "value": "={{$json.input}}"
+            }
+          ]
+        }
+      },
+      "id": "2",
+      "name": "Prepare Prompt",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3,
+      "position": [
+        260,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "notice": "Attach your own local LLM node (Ollama/LM Studio HTTP). Do not enable billing cloud nodes without a human budget check."
+      },
+      "id": "3",
+      "name": "LLM Placeholder",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        520,
+        0
+      ]
+    }
+  ],
+  "connections": {
+    "Manual Trigger": {
+      "main": [
+        [
+          {
+            "node": "Prepare Prompt",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare Prompt": {
+      "main": [
+        [
+          {
+            "node": "LLM Placeholder",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "meta": {
+    "botshelf_job": "personal-assistant",
+    "safety": "manual-trigger-only"
+  }
+}

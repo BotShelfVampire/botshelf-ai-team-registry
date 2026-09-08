@@ -1,0 +1,4 @@
+- Collection name: botshelf-writing-draft
+- Add only documents you have rights to use.
+- Do not upload API keys, .env, or customer PII.
+- This job should remain read-only against knowledge files.

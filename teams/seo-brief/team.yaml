@@ -1,0 +1,58 @@
+team_id: seo-brief
+title: SEO Brief
+category: Marketing
+short_description: Produce a one-page SEO brief
+canonical_url: https://botshelfvampire.com/library/teams/seo-brief/
+license: free-use-at-own-risk
+last_updated: 2026-09-08
+inputs:
+  - keyword
+  - URL/context notes
+outputs:
+  - intent
+  - title options
+  - outline
+  - risks
+implementations:
+  - implementation_id: crewai/seo-brief
+    platform: CrewAI
+    runtime: crewai
+    status: Untested
+    botshelf_url: https://botshelfvampire.com/library/crewai/seo-brief/
+    github_path: teams/seo-brief/crewai
+  - implementation_id: langgraph/seo-brief
+    platform: LangGraph
+    runtime: langgraph
+    status: Untested
+    botshelf_url: https://botshelfvampire.com/library/langgraph/seo-brief/
+    github_path: teams/seo-brief/langgraph
+  - implementation_id: lm-studio/seo-brief
+    platform: LM Studio
+    runtime: lm-studio
+    status: Untested
+    botshelf_url: https://botshelfvampire.com/library/lm-studio/seo-brief/
+    github_path: teams/seo-brief/lm-studio
+  - implementation_id: mcp/seo-brief
+    platform: MCP
+    runtime: mcp
+    status: Untested
+    botshelf_url: https://botshelfvampire.com/library/mcp/seo-brief/
+    github_path: teams/seo-brief/mcp
+  - implementation_id: n8n/seo-brief
+    platform: n8n
+    runtime: n8n
+    status: Untested
+    botshelf_url: https://botshelfvampire.com/library/n8n/seo-brief/
+    github_path: teams/seo-brief/n8n
+  - implementation_id: ollama/seo-brief
+    platform: Ollama
+    runtime: ollama
+    status: Untested
+    botshelf_url: https://botshelfvampire.com/library/ollama/seo-brief/
+    github_path: teams/seo-brief/ollama
+  - implementation_id: open-webui/seo-brief
+    platform: Open WebUI
+    runtime: open-webui
+    status: Untested
+    botshelf_url: https://botshelfvampire.com/library/open-webui/seo-brief/
+    github_path: teams/seo-brief/open-webui

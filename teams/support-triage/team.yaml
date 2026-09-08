@@ -1,0 +1,56 @@
+team_id: support-triage
+title: Support Triage
+category: Support
+short_description: Classify an inbound message, propose a first reply hold, and flag escalation — human sends.
+canonical_url: https://botshelfvampire.com/library/teams/support-triage/
+license: free-use-at-own-risk
+last_updated: 2026-09-08
+inputs:
+  - inbound message paste
+outputs:
+  - classification
+  - first-reply hold
+  - escalation flag
+implementations:
+  - implementation_id: crewai/support-triage
+    platform: CrewAI
+    runtime: crewai
+    status: Untested
+    botshelf_url: https://botshelfvampire.com/library/crewai/support-triage/
+    github_path: teams/support-triage/crewai
+  - implementation_id: langgraph/support-triage
+    platform: LangGraph
+    runtime: langgraph
+    status: Untested
+    botshelf_url: https://botshelfvampire.com/library/langgraph/support-triage/
+    github_path: teams/support-triage/langgraph
+  - implementation_id: lm-studio/support-triage
+    platform: LM Studio
+    runtime: lm-studio
+    status: Untested
+    botshelf_url: https://botshelfvampire.com/library/lm-studio/support-triage/
+    github_path: teams/support-triage/lm-studio
+  - implementation_id: mcp/support-triage
+    platform: MCP
+    runtime: mcp
+    status: Untested
+    botshelf_url: https://botshelfvampire.com/library/mcp/support-triage/
+    github_path: teams/support-triage/mcp
+  - implementation_id: n8n/support-triage
+    platform: n8n
+    runtime: n8n
+    status: Untested
+    botshelf_url: https://botshelfvampire.com/library/n8n/support-triage/
+    github_path: teams/support-triage/n8n
+  - implementation_id: ollama/support-triage
+    platform: Ollama
+    runtime: ollama
+    status: Untested
+    botshelf_url: https://botshelfvampire.com/library/ollama/support-triage/
+    github_path: teams/support-triage/ollama
+  - implementation_id: open-webui/support-triage
+    platform: Open WebUI
+    runtime: open-webui
+    status: Untested
+    botshelf_url: https://botshelfvampire.com/library/open-webui/support-triage/
+    github_path: teams/support-triage/open-webui

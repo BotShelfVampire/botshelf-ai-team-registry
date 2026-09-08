@@ -1,0 +1,55 @@
+team_id: writing-draft
+title: Writing
+category: Content
+short_description: Draft a clear first pass from notes — then stop for human edit. No fake claims or invented metrics.
+canonical_url: https://botshelfvampire.com/library/teams/writing-draft/
+license: free-use-at-own-risk
+last_updated: 2026-09-08
+inputs:
+  - notes / outline
+outputs:
+  - first-pass draft
+  - stop for human edit
+implementations:
+  - implementation_id: crewai/writing-draft
+    platform: CrewAI
+    runtime: crewai
+    status: Untested
+    botshelf_url: https://botshelfvampire.com/library/crewai/writing-draft/
+    github_path: teams/writing-draft/crewai
+  - implementation_id: langgraph/writing-draft
+    platform: LangGraph
+    runtime: langgraph
+    status: Untested
+    botshelf_url: https://botshelfvampire.com/library/langgraph/writing-draft/
+    github_path: teams/writing-draft/langgraph
+  - implementation_id: lm-studio/writing-draft
+    platform: LM Studio
+    runtime: lm-studio
+    status: Untested
+    botshelf_url: https://botshelfvampire.com/library/lm-studio/writing-draft/
+    github_path: teams/writing-draft/lm-studio
+  - implementation_id: mcp/writing-draft
+    platform: MCP
+    runtime: mcp
+    status: Untested
+    botshelf_url: https://botshelfvampire.com/library/mcp/writing-draft/
+    github_path: teams/writing-draft/mcp
+  - implementation_id: n8n/writing-draft
+    platform: n8n
+    runtime: n8n
+    status: Untested
+    botshelf_url: https://botshelfvampire.com/library/n8n/writing-draft/
+    github_path: teams/writing-draft/n8n
+  - implementation_id: ollama/writing-draft
+    platform: Ollama
+    runtime: ollama
+    status: Untested
+    botshelf_url: https://botshelfvampire.com/library/ollama/writing-draft/
+    github_path: teams/writing-draft/ollama
+  - implementation_id: open-webui/writing-draft
+    platform: Open WebUI
+    runtime: open-webui
+    status: Untested
+    botshelf_url: https://botshelfvampire.com/library/open-webui/writing-draft/
+    github_path: teams/writing-draft/open-webui

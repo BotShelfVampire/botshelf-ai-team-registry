@@ -1,0 +1,56 @@
+team_id: doc-review
+title: Doc Review
+category: Documentation
+short_description: Review docs for clarity, broken promises, and missing prerequisites before publish.
+canonical_url: https://botshelfvampire.com/library/teams/doc-review/
+license: free-use-at-own-risk
+last_updated: 2026-09-08
+inputs:
+  - doc draft paste
+outputs:
+  - clarity issues
+  - broken promises
+  - missing prerequisites
+implementations:
+  - implementation_id: crewai/doc-review
+    platform: CrewAI
+    runtime: crewai
+    status: Untested
+    botshelf_url: https://botshelfvampire.com/library/crewai/doc-review/
+    github_path: teams/doc-review/crewai
+  - implementation_id: langgraph/doc-review
+    platform: LangGraph
+    runtime: langgraph
+    status: Untested
+    botshelf_url: https://botshelfvampire.com/library/langgraph/doc-review/
+    github_path: teams/doc-review/langgraph
+  - implementation_id: lm-studio/doc-review
+    platform: LM Studio
+    runtime: lm-studio
+    status: Untested
+    botshelf_url: https://botshelfvampire.com/library/lm-studio/doc-review/
+    github_path: teams/doc-review/lm-studio
+  - implementation_id: mcp/doc-review
+    platform: MCP
+    runtime: mcp
+    status: Untested
+    botshelf_url: https://botshelfvampire.com/library/mcp/doc-review/
+    github_path: teams/doc-review/mcp
+  - implementation_id: n8n/doc-review
+    platform: n8n
+    runtime: n8n
+    status: Untested
+    botshelf_url: https://botshelfvampire.com/library/n8n/doc-review/
+    github_path: teams/doc-review/n8n
+  - implementation_id: ollama/doc-review
+    platform: Ollama
+    runtime: ollama
+    status: Untested
+    botshelf_url: https://botshelfvampire.com/library/ollama/doc-review/
+    github_path: teams/doc-review/ollama
+  - implementation_id: open-webui/doc-review
+    platform: Open WebUI
+    runtime: open-webui
+    status: Untested
+    botshelf_url: https://botshelfvampire.com/library/open-webui/doc-review/
+    github_path: teams/doc-review/open-webui

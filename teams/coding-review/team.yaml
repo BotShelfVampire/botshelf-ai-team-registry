@@ -1,0 +1,56 @@
+team_id: coding-review
+title: Coding Review
+category: Engineering
+short_description: Review a diff or file for bugs, risky paths, and missing tests — without auto-committing or running destructive commands.
+canonical_url: https://botshelfvampire.com/library/teams/coding-review/
+license: free-use-at-own-risk
+last_updated: 2026-09-08
+inputs:
+  - diff or file paste
+outputs:
+  - bug/risk findings
+  - missing-test notes
+  - reversible next steps
+implementations:
+  - implementation_id: crewai/coding-review
+    platform: CrewAI
+    runtime: crewai
+    status: Untested
+    botshelf_url: https://botshelfvampire.com/library/crewai/coding-review/
+    github_path: teams/coding-review/crewai
+  - implementation_id: langgraph/coding-review
+    platform: LangGraph
+    runtime: langgraph
+    status: Untested
+    botshelf_url: https://botshelfvampire.com/library/langgraph/coding-review/
+    github_path: teams/coding-review/langgraph
+  - implementation_id: lm-studio/coding-review
+    platform: LM Studio
+    runtime: lm-studio
+    status: Untested
+    botshelf_url: https://botshelfvampire.com/library/lm-studio/coding-review/
+    github_path: teams/coding-review/lm-studio
+  - implementation_id: mcp/coding-review
+    platform: MCP
+    runtime: mcp
+    status: Untested
+    botshelf_url: https://botshelfvampire.com/library/mcp/coding-review/
+    github_path: teams/coding-review/mcp
+  - implementation_id: n8n/coding-review
+    platform: n8n
+    runtime: n8n
+    status: Untested
+    botshelf_url: https://botshelfvampire.com/library/n8n/coding-review/
+    github_path: teams/coding-review/n8n
+  - implementation_id: ollama/coding-review
+    platform: Ollama
+    runtime: ollama
+    status: Untested
+    botshelf_url: https://botshelfvampire.com/library/ollama/coding-review/
+    github_path: teams/coding-review/ollama
+  - implementation_id: open-webui/coding-review
+    platform: Open WebUI
+    runtime: open-webui
+    status: Untested
+    botshelf_url: https://botshelfvampire.com/library/open-webui/coding-review/
+    github_path: teams/coding-review/open-webui

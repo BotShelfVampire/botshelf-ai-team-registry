@@ -1,0 +1,54 @@
+team_id: lead-research
+title: Lead Research
+category: Sales
+short_description: Build a respectful lead brief from public facts you paste — no scraping secrets, no spam scripts.
+canonical_url: https://botshelfvampire.com/library/teams/lead-research/
+license: free-use-at-own-risk
+last_updated: 2026-09-08
+inputs:
+  - public facts you paste
+outputs:
+  - respectful lead brief
+implementations:
+  - implementation_id: crewai/lead-research
+    platform: CrewAI
+    runtime: crewai
+    status: Untested
+    botshelf_url: https://botshelfvampire.com/library/crewai/lead-research/
+    github_path: teams/lead-research/crewai
+  - implementation_id: langgraph/lead-research
+    platform: LangGraph
+    runtime: langgraph
+    status: Untested
+    botshelf_url: https://botshelfvampire.com/library/langgraph/lead-research/
+    github_path: teams/lead-research/langgraph
+  - implementation_id: lm-studio/lead-research
+    platform: LM Studio
+    runtime: lm-studio
+    status: Untested
+    botshelf_url: https://botshelfvampire.com/library/lm-studio/lead-research/
+    github_path: teams/lead-research/lm-studio
+  - implementation_id: mcp/lead-research
+    platform: MCP
+    runtime: mcp
+    status: Untested
+    botshelf_url: https://botshelfvampire.com/library/mcp/lead-research/
+    github_path: teams/lead-research/mcp
+  - implementation_id: n8n/lead-research
+    platform: n8n
+    runtime: n8n
+    status: Untested
+    botshelf_url: https://botshelfvampire.com/library/n8n/lead-research/
+    github_path: teams/lead-research/n8n
+  - implementation_id: ollama/lead-research
+    platform: Ollama
+    runtime: ollama
+    status: Untested
+    botshelf_url: https://botshelfvampire.com/library/ollama/lead-research/
+    github_path: teams/lead-research/ollama
+  - implementation_id: open-webui/lead-research
+    platform: Open WebUI
+    runtime: open-webui
+    status: Untested
+    botshelf_url: https://botshelfvampire.com/library/open-webui/lead-research/
+    github_path: teams/lead-research/open-webui
