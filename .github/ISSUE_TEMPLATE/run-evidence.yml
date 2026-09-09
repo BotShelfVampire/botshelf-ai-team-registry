@@ -1,0 +1,97 @@
+name: Share verified run evidence
+description: Report a real test of a Build Library workflow so others can inspect what worked and what failed.
+title: "[run evidence] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Share only redacted or permissioned material. Do not include credentials, private messages, personal data, customer records, wallet details, or proprietary inputs. This form is for Build Library evidence, not Marketplace product submission.
+
+  - type: input
+    id: team
+    attributes:
+      label: Team or job
+      description: Link the exact team directory or file you tested.
+      placeholder: teams/deep-research/ollama
+    validations:
+      required: true
+
+  - type: dropdown
+    id: runtime
+    attributes:
+      label: Runtime
+      options:
+        - Ollama
+        - LM Studio
+        - Open WebUI
+        - n8n
+        - CrewAI
+        - LangGraph
+        - MCP
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: model
+    attributes:
+      label: Model and version
+      description: Include the exact model tag or version where available.
+      placeholder: llama3.2:3b
+    validations:
+      required: true
+
+  - type: input
+    id: revision
+    attributes:
+      label: Source revision
+      description: Commit SHA or permanent GitHub link for the files tested.
+      placeholder: Full commit SHA
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment and setup
+      description: Operating system, relevant runtime version, settings, and dependencies. Exclude secrets.
+    validations:
+      required: true
+
+  - type: textarea
+    id: input
+    attributes:
+      label: Redacted input
+      description: Provide the smallest input needed to understand the test.
+      render: text
+    validations:
+      required: true
+
+  - type: textarea
+    id: output
+    attributes:
+      label: Actual output
+      description: Paste the actual output or link to a permanent, public artifact. Do not substitute an expected result.
+      render: text
+    validations:
+      required: true
+
+  - type: textarea
+    id: evaluation
+    attributes:
+      label: What worked, failed, or required editing
+      description: Include unsupported claims, missing citations, tool failures, and manual corrections.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Evidence checks
+      options:
+        - label: I removed secrets and private or identifying data.
+          required: true
+        - label: This report describes a real run, not a syntax check or illustrative output.
+          required: true
+        - label: I have not represented this as Marketplace verification or a performance guarantee.
+          required: true
