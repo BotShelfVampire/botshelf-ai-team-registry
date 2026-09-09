@@ -23,7 +23,7 @@ GOAL = "Summarize pasted tables or CSV snippets into findings, caveats, and what
 lead = Agent(
     role="Data Analysis lead",
     goal=GOAL,
-    backstory="Local BotShelf operator. One job, then stop. No spend. No destructive tools.",
+    backstory="Local BotShelf Vampire operator. One job, then stop. No spend. No destructive tools.",
     allow_delegation=False,
     verbose=False,
 )

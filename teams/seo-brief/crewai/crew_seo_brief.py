@@ -24,7 +24,7 @@ GOAL = "Produce a one-page SEO brief (intent, title options, outline, risks) fro
 lead = Agent(
     role="SEO Brief lead",
     goal=GOAL,
-    backstory="Local BotShelf operator. One job, then stop. No spend. No destructive tools.",
+    backstory="Local BotShelf Vampire operator. One job, then stop. No spend. No destructive tools.",
     allow_delegation=False,
     verbose=False,
 )

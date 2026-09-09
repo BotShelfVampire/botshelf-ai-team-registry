@@ -31,3 +31,7 @@ OUTPUT:
 - Team parent: https://botshelfvampire.com/library/teams/doc-review/
 - Implementation: https://botshelfvampire.com/library/n8n/doc-review/
 - Registry: https://botshelfvampire.com/library/registry.json
+
+## Implementation boundary
+
+The supplied LLM Placeholder is a no-op node; this recipe does not yet call a model. Review the prepared system prompt for completeness, provide an input, and configure and test your own inference node before describing it as a working workflow. Importing JSON alone is not a runtime test.

@@ -23,7 +23,7 @@ GOAL = "Draft a clear first pass from notes \u2014 then stop for human edit. No 
 lead = Agent(
     role="Writing Draft lead",
     goal=GOAL,
-    backstory="Local BotShelf operator. One job, then stop. No spend. No destructive tools.",
+    backstory="Local BotShelf Vampire operator. One job, then stop. No spend. No destructive tools.",
     allow_delegation=False,
     verbose=False,
 )

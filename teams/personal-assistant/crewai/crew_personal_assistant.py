@@ -23,7 +23,7 @@ GOAL = "Daily capture \u2192 prioritized plan with stop rules. Local-first; does
 lead = Agent(
     role="Personal Assistant lead",
     goal=GOAL,
-    backstory="Local BotShelf operator. One job, then stop. No spend. No destructive tools.",
+    backstory="Local BotShelf Vampire operator. One job, then stop. No spend. No destructive tools.",
     allow_delegation=False,
     verbose=False,
 )

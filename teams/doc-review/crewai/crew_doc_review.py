@@ -22,7 +22,7 @@ GOAL = "Review docs for clarity, broken promises, and missing prerequisites befo
 lead = Agent(
     role="Doc Review lead",
     goal=GOAL,
-    backstory="Local BotShelf operator. One job, then stop. No spend. No destructive tools.",
+    backstory="Local BotShelf Vampire operator. One job, then stop. No spend. No destructive tools.",
     allow_delegation=False,
     verbose=False,
 )

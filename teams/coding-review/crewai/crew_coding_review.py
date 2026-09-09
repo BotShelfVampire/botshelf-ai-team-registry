@@ -24,7 +24,7 @@ GOAL = "Review a diff or file for bugs, risky paths, and missing tests \u2014 wi
 lead = Agent(
     role="Coding Review lead",
     goal=GOAL,
-    backstory="Local BotShelf operator. One job, then stop. No spend. No destructive tools.",
+    backstory="Local BotShelf Vampire operator. One job, then stop. No spend. No destructive tools.",
     allow_delegation=False,
     verbose=False,
 )

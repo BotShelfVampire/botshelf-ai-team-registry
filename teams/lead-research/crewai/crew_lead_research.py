@@ -24,7 +24,7 @@ GOAL = "Build a respectful lead brief from public facts you paste \u2014 no scra
 lead = Agent(
     role="Lead Research lead",
     goal=GOAL,
-    backstory="Local BotShelf operator. One job, then stop. No spend. No destructive tools.",
+    backstory="Local BotShelf Vampire operator. One job, then stop. No spend. No destructive tools.",
     allow_delegation=False,
     verbose=False,
 )

@@ -16,3 +16,7 @@ Two-agent crew (produce + gate). Keep tools disabled unless you add read-only to
 - Team parent: https://botshelfvampire.com/library/teams/coding-review/
 - Implementation: https://botshelfvampire.com/library/crewai/coding-review/
 - Registry: https://botshelfvampire.com/library/registry.json
+
+## Model configuration
+
+The accompanying script does not explicitly bind a local model provider. Configure the LLM you intend to use before running it; the word local in a comment does not select an endpoint or prevent provider charges. Record the actual model, dependencies, input, and output when testing.

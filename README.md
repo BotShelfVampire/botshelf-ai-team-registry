@@ -45,6 +45,8 @@ Runtime directories are **variants of a job**, not additional distinct teams. A 
 
 For a concrete local starting point, open [Deep Research for Ollama](teams/deep-research/ollama/). Its Modelfile contains the build and run commands. The system prompt asks for findings, open questions, and next checks without inventing citations.
 
+[Ollama walkthrough](docs/ollama-source-research.md) · [Run-evidence template](docs/run-evidence-template.md)
+
 ## Verification status
 
 Treat an implementation as **Untested unless evidence identifies the exact runtime, model, version, input, and result**. Source files and website status can differ between revisions. A website's verification badge does not automatically verify this GitHub snapshot.

@@ -15,3 +15,7 @@ Graph includes an explicit human checkpoint. Stage-1 ends after gate (no infinit
 - Team parent: https://botshelfvampire.com/library/teams/data-analysis/
 - Implementation: https://botshelfvampire.com/library/langgraph/data-analysis/
 - Registry: https://botshelfvampire.com/library/registry.json
+
+## Implementation boundary
+
+The accompanying Python file is a graph sketch. Its produce function returns a model-output placeholder; no model inference is wired. Connect and test a model before describing the result as an executed AI workflow. The gate ends the sketch and does not provide an interactive approval UI.

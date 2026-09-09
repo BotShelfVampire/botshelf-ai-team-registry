@@ -1,6 +1,6 @@
 {
   "name": "library_search",
-  "description": "Search local BotShelf library snippets",
+  "description": "Search local BotShelf Vampire Build Library snippets",
   "inputSchema": {
     "type": "object",
     "properties": {

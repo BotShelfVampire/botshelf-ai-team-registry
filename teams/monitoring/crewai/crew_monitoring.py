@@ -24,7 +24,7 @@ GOAL = "Turn a status paste or log snippet into a short health note: what change
 lead = Agent(
     role="Monitoring Check lead",
     goal=GOAL,
-    backstory="Local BotShelf operator. One job, then stop. No spend. No destructive tools.",
+    backstory="Local BotShelf Vampire operator. One job, then stop. No spend. No destructive tools.",
     allow_delegation=False,
     verbose=False,
 )

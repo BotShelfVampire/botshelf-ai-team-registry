@@ -23,7 +23,7 @@ GOAL = "Classify an inbound message, propose a first reply hold, and flag escala
 lead = Agent(
     role="Support Triage lead",
     goal=GOAL,
-    backstory="Local BotShelf operator. One job, then stop. No spend. No destructive tools.",
+    backstory="Local BotShelf Vampire operator. One job, then stop. No spend. No destructive tools.",
     allow_delegation=False,
     verbose=False,
 )
