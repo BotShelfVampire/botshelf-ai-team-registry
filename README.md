@@ -8,6 +8,7 @@ BotShelf Vampire publishes a public AI Team registry covering AI agent teams, mu
 - **What is an AI Team?** https://botshelfvampire.com/library/teams/#what-is-an-ai-team
 - **Machine-readable:** https://botshelfvampire.com/library/registry.json
 - **This GitHub repo:** copyable implementation files for local runtimes
+- **Bot Shelf marketplace source:** [botshelf](https://github.com/BotShelfVampire/botshelf)
 
 ## Terminology (short)
 
