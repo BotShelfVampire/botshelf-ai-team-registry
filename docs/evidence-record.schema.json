@@ -45,7 +45,7 @@
         "implementation_id": { "type": "string", "minLength": 1 },
         "runtime": { "type": "string", "minLength": 1 },
         "runtime_version": { "type": ["string", "null"] },
-        "model": { "type": "string", "minLength": 1 },
+        "model": { "type": ["string", "null"], "description": "Exact model identifier, or null when no model execution occurred." },
         "model_version_or_digest": { "type": ["string", "null"] },
         "environment": { "type": ["string", "null"] }
       }
