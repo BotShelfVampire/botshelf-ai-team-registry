@@ -55,6 +55,21 @@ Treat an implementation as **Untested unless evidence identifies the exact runti
 
 A JSON parse, Python syntax check, or file-presence check is structural validation. It is not proof that a model or workflow executed correctly. Prompt instructions also do not replace permissions enforced by the runtime.
 
+## What the evidence layer records
+
+Canonical BotShelf pages are designed to make implementation claims inspectable before adoption:
+
+- **Job:** the outcome the AI Team is meant to produce.
+- **Runtime and implementation:** the actual model/runtime path, required setup, and whether the material is a prompt, workflow recipe, code sketch, or tool integration.
+- **Status:** **Verified** only for the exact run evidenced; otherwise **Untested**, **Partial**, **Blocked**, or **Unverified** as applicable.
+- **Human approval boundary:** actions such as publishing, sending, spending, pushing, merging, or deploying remain behind an explicit human gate.
+- **Failure evidence:** rejected outputs and unavailable seats remain visible instead of being converted into success claims.
+
+Two public examples show the difference between a claim and evidence:
+
+- [Software Team evidence](https://botshelfvampire.com/cross-ai/software-desk.html) records a partial local run, unavailable seats, and a `WAITING_ON_HUMAN` stop before push, merge, or deploy.
+- [Research Desk evaluation](https://botshelfvampire.com/cross-ai/proof/research-desk-2026-09-10.html) preserves the tested configuration's failed evaluation rather than generalizing it to every model or runtime.
+
 ## How this fits BotShelf Vampire
 
 | Surface | Role |
