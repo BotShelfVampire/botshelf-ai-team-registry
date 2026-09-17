@@ -1,0 +1,36 @@
+# BotShelf Vampire
+
+> BotShelf Vampire is building a public implementation and evidence layer for AI Teams. It separates ready-to-use Marketplace listings from Build Library foundations and keeps verification state, human approval boundaries, failures, unrun checks, and known limits visible.
+
+## Canonical surfaces
+
+- [Marketplace](https://botshelfvampire.com/): ready-to-use free and paid AI Team product listings.
+- [Build Library](https://botshelfvampire.com/library/): local and self-hosted foundations organized by job and runtime.
+- [AI Team Registry](https://github.com/BotShelfVampire/botshelf-ai-team-registry): copyable source for Build Library materials.
+- [Machine-readable registry](https://botshelfvampire.com/library/registry.json): current inventory and status.
+
+## Evidence and verification
+
+- [Evidence-record schema](https://github.com/BotShelfVampire/botshelf-ai-team-registry/blob/main/docs/evidence-record.schema.json): fields for the job, implementation, pinned revision, runtime and model, checks, approval boundary, failures, limits, and artifacts.
+- [Conservative Partial example](https://github.com/BotShelfVampire/botshelf-ai-team-registry/blob/main/examples/evidence-record.artifact-gate.json): records deterministic checks while keeping unrun model and publisher checks visible.
+- [Software Team evidence](https://botshelfvampire.com/cross-ai/software-desk.html): preserves unavailable seats and a WAITING_ON_HUMAN boundary before push, merge, or deploy.
+- [Research Desk evaluation](https://botshelfvampire.com/cross-ai/proof/research-desk-2026-09-10.html): preserves a failed evaluation for the tested configuration.
+- [Media brief](https://github.com/BotShelfVampire/botshelf-ai-team-registry/blob/main/docs/media-brief.md): concise editorial overview and independent verification path.
+
+## Interpretation rules
+
+- Treat an implementation as Untested unless evidence identifies the exact runtime, model, version, input scope, checks, and observed result.
+- Verified applies only to the exact implementation, revision, runtime, model, input scope, and checks evidenced.
+- JSON parsing, syntax checks, file-presence checks, or schema validity are structural validation, not proof of semantic accuracy, safety, or successful AI execution.
+- A prompt pack is not automatically a multi-agent system. A runtime variant is not an additional team.
+- Actions that affect other people, accounts, money, publication, source control, or production remain behind an explicit human approval boundary.
+- Failed, blocked, and unrun checks should remain visible rather than being converted into success claims.
+- BotShelf Vampire is independent of the AI runtime vendors named in its materials.
+
+## Suggested review path
+
+1. Choose a job in the Build Library.
+2. Inspect its source files, prerequisites, and runtime implementation.
+3. Read the canonical status in the machine-readable registry.
+4. Compare claims with revision-specific evidence.
+5. Confirm that failures, unrun checks, limits, and approval boundaries are explicit.
