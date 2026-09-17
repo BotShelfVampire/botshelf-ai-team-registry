@@ -47,6 +47,8 @@ For a concrete local starting point, open [Deep Research for Ollama](teams/deep-
 
 [Ollama walkthrough](docs/ollama-source-research.md) · [Run-evidence template](docs/run-evidence-template.md)
 
+For workflows split across writer and reviewer agents, use the [exact-artifact review gate](docs/cross-agent-artifact-gate.md): copyable prompts, a dependency-free Python checker, and failure-case tests. It catches a draft changed after review; it does not authenticate reviewers or authorize publication.
+
 ## Verification status
 
 Treat an implementation as **Untested unless evidence identifies the exact runtime, model, version, input, and result**. Source files and website status can differ between revisions. A website's verification badge does not automatically verify this GitHub snapshot.
