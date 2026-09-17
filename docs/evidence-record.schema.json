@@ -1,0 +1,160 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://botshelfvampire.com/schemas/evidence-record.schema.json",
+  "title": "BotShelf Vampire AI Team Evidence Record",
+  "description": "A narrow, revision-specific record for an AI Team implementation or evaluation. A conforming record makes evidence inspectable; schema validity alone does not verify task accuracy or safety.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "record_id",
+    "job",
+    "implementation",
+    "source_revision",
+    "verification_status",
+    "tested_at",
+    "input_scope",
+    "observed_result",
+    "checks",
+    "human_approval_boundary",
+    "failures",
+    "known_limits",
+    "evidence_artifacts"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "1.0"
+    },
+    "record_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Stable identifier for this evidence record."
+    },
+    "job": {
+      "type": "string",
+      "minLength": 1,
+      "description": "The outcome the AI Team is intended to produce."
+    },
+    "implementation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["team_id", "implementation_id", "runtime", "model"],
+      "properties": {
+        "team_id": { "type": "string", "minLength": 1 },
+        "implementation_id": { "type": "string", "minLength": 1 },
+        "runtime": { "type": "string", "minLength": 1 },
+        "runtime_version": { "type": ["string", "null"] },
+        "model": { "type": "string", "minLength": 1 },
+        "model_version_or_digest": { "type": ["string", "null"] },
+        "environment": { "type": ["string", "null"] }
+      }
+    },
+    "source_revision": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Pinned commit, release, or immutable source revision."
+    },
+    "verification_status": {
+      "type": "string",
+      "enum": ["Untested", "Partial", "Blocked", "Unverified", "Verified"],
+      "description": "Verified applies only to the exact implementation, revision, runtime, model, input scope, and checks evidenced by this record."
+    },
+    "tested_at": {
+      "type": ["string", "null"],
+      "format": "date-time",
+      "description": "ISO 8601 timestamp, or null when no execution occurred."
+    },
+    "input_scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["description", "sensitive_data_redacted"],
+      "properties": {
+        "description": { "type": "string", "minLength": 1 },
+        "sensitive_data_redacted": { "type": "boolean" },
+        "fixtures_or_sources": {
+          "type": "array",
+          "items": { "type": "string" },
+          "default": []
+        }
+      }
+    },
+    "observed_result": {
+      "type": "string",
+      "minLength": 1,
+      "description": "What actually happened, including partial or blocked outcomes."
+    },
+    "checks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "result", "evidence"],
+        "properties": {
+          "name": { "type": "string", "minLength": 1 },
+          "result": { "type": "string", "enum": ["pass", "fail", "blocked", "not_run"] },
+          "evidence": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "human_approval_boundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["required_before", "enforced_by_runtime"],
+      "properties": {
+        "required_before": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["send", "spend", "publish", "push", "merge", "deploy", "delete", "external_write", "other"]
+          },
+          "uniqueItems": true
+        },
+        "other_boundary": { "type": ["string", "null"] },
+        "enforced_by_runtime": { "type": "boolean" },
+        "enforcement_evidence": { "type": ["string", "null"] }
+      }
+    },
+    "failures": {
+      "type": "array",
+      "description": "Observed failures remain visible. Use an empty array only when no failures were observed in the recorded scope.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["stage", "description"],
+        "properties": {
+          "stage": { "type": "string", "minLength": 1 },
+          "description": { "type": "string", "minLength": 1 },
+          "artifact": { "type": ["string", "null"], "format": "uri-reference" }
+        }
+      }
+    },
+    "known_limits": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "evidence_artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["label", "uri"],
+        "properties": {
+          "label": { "type": "string", "minLength": 1 },
+          "uri": { "type": "string", "format": "uri-reference" },
+          "sha256": {
+            "type": ["string", "null"],
+            "pattern": "^[A-Fa-f0-9]{64}$"
+          }
+        }
+      }
+    },
+    "reviewer": {
+      "type": ["string", "null"],
+      "description": "Reviewer identity or role when disclosed."
+    },
+    "notes": {
+      "type": ["string", "null"]
+    }
+  }
+}
