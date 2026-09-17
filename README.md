@@ -61,6 +61,8 @@ Canonical BotShelf pages are designed to make implementation claims inspectable 
 
 The [artifact-gate evidence record](examples/evidence-record.artifact-gate.json) is a conservative machine-readable example: it is marked **Partial**, records the checks that ran, keeps unrun model and publisher checks visible, and does not promote a deterministic unit test to a verified AI workflow.
 
+For an evidence-first overview designed for independent editorial review, see the [public media brief](docs/media-brief.md).
+
 - **Job:** the outcome the AI Team is meant to produce.
 - **Runtime and implementation:** the actual model/runtime path, required setup, and whether the material is a prompt, workflow recipe, code sketch, or tool integration.
 - **Status:** **Verified** only for the exact run evidenced; otherwise **Untested**, **Partial**, **Blocked**, or **Unverified** as applicable.
