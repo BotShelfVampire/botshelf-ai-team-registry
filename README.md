@@ -59,6 +59,8 @@ A JSON parse, Python syntax check, or file-presence check is structural validati
 
 Canonical BotShelf pages are designed to make implementation claims inspectable before adoption. The [machine-readable evidence-record schema](docs/evidence-record.schema.json) defines the fields needed to pin a claim to a job, implementation, source revision, runtime, model, checks, approval boundary, failures, limits, and supporting artifacts. Schema validity makes a record easier to inspect; it does not by itself prove accuracy or safety.
 
+The [artifact-gate evidence record](examples/evidence-record.artifact-gate.json) is a conservative machine-readable example: it is marked **Partial**, records the checks that ran, keeps unrun model and publisher checks visible, and does not promote a deterministic unit test to a verified AI workflow.
+
 - **Job:** the outcome the AI Team is meant to produce.
 - **Runtime and implementation:** the actual model/runtime path, required setup, and whether the material is a prompt, workflow recipe, code sketch, or tool integration.
 - **Status:** **Verified** only for the exact run evidenced; otherwise **Untested**, **Partial**, **Blocked**, or **Unverified** as applicable.
