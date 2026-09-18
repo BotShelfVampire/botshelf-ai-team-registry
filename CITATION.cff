@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use or reference this registry, please cite it using the metadata below."
+title: "BotShelf Vampire AI Team Registry"
+type: software
+authors:
+  - name: "BotShelf Vampire"
+abstract: >-
+  An open registry and evidence format for AI Team implementations. It records
+  the job performed, runtime and implementation details, verification state,
+  human approval boundaries, visible failed or unexecuted evaluations, known
+  limitations, and produced artifacts. Marketplace listings and Build Library
+  implementations are kept distinct.
+repository-code: "https://github.com/BotShelfVampire/botshelf-ai-team-registry"
+url: "https://botshelfvampire.com/"
+license: MIT
+keywords:
+  - AI agents
+  - AI teams
+  - agent evaluation
+  - implementation evidence
+  - human approval
+  - runtime
+  - verification
