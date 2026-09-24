@@ -1,0 +1,117 @@
+{
+  "$schema": "../docs/evidence-record.schema.json",
+  "schema_version": "1.0",
+  "record_id": "research-desk-RD-2026-09-10-001",
+  "job": "Collect public sources, extract evidence with a local model, audit the evidence, and produce a research brief without authorizing publication or other external action.",
+  "implementation": {
+    "team_id": "research-desk",
+    "implementation_id": "RD-2026-09-10-001",
+    "runtime": "sequential: web-fetch-curl -> Ollama -> local-file-audit -> executor-synthesis",
+    "runtime_version": null,
+    "model": "llama3.2 3.2B via botshelf-deep-research-3b",
+    "model_version_or_digest": null,
+    "environment": "Local sequential run; ChatGPT was not used"
+  },
+  "source_revision": "run:RD-2026-09-10-001",
+  "verification_status": "Blocked",
+  "tested_at": null,
+  "input_scope": {
+    "description": "Eight public BotShelf Vampire Library URLs were fetched successfully. The public proof page is redacted and does not reproduce the complete prompt, source set, or acceptance rubric.",
+    "sensitive_data_redacted": true,
+    "fixtures_or_sources": [
+      "https://botshelfvampire.com/cross-ai/proof/research-desk-2026-09-10.html"
+    ]
+  },
+  "observed_result": "Limited workflow and evidence checks passed, but answer quality was 0 of 9 accepted. A later review found unsupported publication approvals, false claim attributions, and missed numerical inconsistencies. No external action was executed.",
+  "checks": [
+    {
+      "name": "Public Library sources collected",
+      "result": "pass",
+      "evidence": "The public proof page reports 8 public Library URLs returned HTTP 200."
+    },
+    {
+      "name": "Ollama structure and extraction",
+      "result": "pass",
+      "evidence": "The public proof page reports a completed botshelf-deep-research-3b extraction using llama3.2 3.2B in approximately 13.8 seconds."
+    },
+    {
+      "name": "Local Proof Engine audit",
+      "result": "pass",
+      "evidence": "The historical workflow table reports PASS for the local markdown/JSON audit. This is not evidence of answer reliability."
+    },
+    {
+      "name": "Runtime attribution",
+      "result": "pass",
+      "evidence": "The proof page identifies executor-synthesis as the synthesis runtime and explicitly states that ChatGPT was not used."
+    },
+    {
+      "name": "Conflicts recorded",
+      "result": "pass",
+      "evidence": "The historical workflow table reports two recorded conflicts."
+    },
+    {
+      "name": "Answer acceptance",
+      "result": "fail",
+      "evidence": "The public proof page reports 0 / 9 accepted."
+    },
+    {
+      "name": "Verified status promotion",
+      "result": "blocked",
+      "evidence": "The run did not support a Library Verified claim or Verified status flip."
+    },
+    {
+      "name": "External action",
+      "result": "not_run",
+      "evidence": "The proof page states that no external action was executed in these tests."
+    }
+  ],
+  "human_approval_boundary": {
+    "required_before": [
+      "publish",
+      "external_write"
+    ],
+    "other_boundary": "Original-source review is required before using an output for publication approval, trading decisions, or another consequential action.",
+    "enforced_by_runtime": false,
+    "enforcement_evidence": "No external action occurred in the recorded tests, but the public proof page does not demonstrate a runtime-enforced approval gate."
+  },
+  "failures": [
+    {
+      "stage": "publication approval",
+      "description": "The September 11 review found unsupported publication approvals.",
+      "artifact": "https://botshelfvampire.com/cross-ai/proof/research-desk-2026-09-10.html"
+    },
+    {
+      "stage": "claim attribution",
+      "description": "The September 11 review found false claim attributions.",
+      "artifact": "https://botshelfvampire.com/cross-ai/proof/research-desk-2026-09-10.html"
+    },
+    {
+      "stage": "numerical consistency",
+      "description": "The September 11 review found missed numerical inconsistencies.",
+      "artifact": "https://botshelfvampire.com/cross-ai/proof/research-desk-2026-09-10.html"
+    }
+  ],
+  "known_limits": [
+    "The public page is redacted and does not disclose the exact test timestamp.",
+    "The public page does not disclose a source commit, model digest, complete prompt, complete source set, or the nine-item acceptance rubric.",
+    "The workflow was sequential local execution, not simultaneous collaboration among cloud AI services.",
+    "Passing source-fetch, structure, audit, attribution, conflict-recording, or envelope checks does not establish answer reliability.",
+    "Outputs require checking against the original sources.",
+    "The proof page warns of soft invention risk on open Verified-criteria questions.",
+    "This record does not generalize the failed result to another model, runtime, prompt, revision, input set, or future run."
+  ],
+  "evidence_artifacts": [
+    {
+      "label": "Public redacted proof page",
+      "uri": "https://botshelfvampire.com/cross-ai/proof/research-desk-2026-09-10.html",
+      "sha256": null
+    },
+    {
+      "label": "Research Desk overview",
+      "uri": "https://botshelfvampire.com/cross-ai/research-desk.html",
+      "sha256": null
+    }
+  ],
+  "reviewer": "September 11 review; reviewer identity not disclosed on the public proof page",
+  "notes": "This record preserves the distinction between historical workflow checks and answer reliability. It does not claim that the test was Verified, safe for unattended use, or representative of every Research Desk implementation."
+}
