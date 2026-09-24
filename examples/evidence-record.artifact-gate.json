@@ -1,5 +1,5 @@
 {
-  "$schema": "../../docs/evidence-record.schema.json",
+  "$schema": "../docs/evidence-record.schema.json",
   "schema_version": "1.0",
   "record_id": "artifact-gate-python-2026-09-17",
   "job": "Confirm that an approved review still refers to the exact artifact bytes before a publish step.",
