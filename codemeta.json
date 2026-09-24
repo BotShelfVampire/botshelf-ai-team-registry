@@ -1,0 +1,38 @@
+{
+  "@context": "https://w3id.org/codemeta/4.0",
+  "@type": "SoftwareSourceCode",
+  "@id": "https://github.com/BotShelfVampire/botshelf-ai-team-registry",
+  "identifier": "botshelf-ai-team-registry",
+  "name": "BotShelf Vampire AI Team Registry",
+  "description": "Public source for the BotShelf Vampire Build Library and its implementation/evidence layer for AI Teams. It records the job performed, runtime and implementation, verification state, human approval boundaries, failed or unexecuted evaluations, known limitations, and produced artifacts while keeping the Marketplace distinct from the Build Library.",
+  "codeRepository": "https://github.com/BotShelfVampire/botshelf-ai-team-registry",
+  "issueTracker": "https://github.com/BotShelfVampire/botshelf-ai-team-registry/issues",
+  "url": "https://botshelfvampire.com/library/",
+  "license": "https://github.com/BotShelfVampire/botshelf-ai-team-registry/blob/main/LICENSE",
+  "dateCreated": "2026",
+  "dateModified": "2026-09-24",
+  "isAccessibleForFree": true,
+  "author": {
+    "@type": "Organization",
+    "name": "BotShelf Vampire",
+    "url": "https://botshelfvampire.com/"
+  },
+  "keywords": [
+    "AI agents",
+    "AI teams",
+    "agent evaluation",
+    "implementation evidence",
+    "human approval",
+    "runtime",
+    "verification",
+    "failed evaluations",
+    "Build Library"
+  ],
+  "applicationCategory": "AI agent implementation registry and evidence metadata",
+  "relatedLink": [
+    "https://botshelfvampire.com/library/registry.json",
+    "https://github.com/BotShelfVampire/botshelf-ai-team-registry/blob/main/docs/evidence-record.schema.json",
+    "https://github.com/BotShelfVampire/botshelf-ai-team-registry/blob/main/examples/evidence-record.artifact-gate.json",
+    "https://github.com/BotShelfVampire/botshelf-ai-team-registry/blob/main/docs/media-brief.md"
+  ]
+}
