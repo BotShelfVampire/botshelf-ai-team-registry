@@ -12,7 +12,6 @@ abstract: >-
   implementations are kept distinct.
 repository-code: "https://github.com/BotShelfVampire/botshelf-ai-team-registry"
 url: "https://botshelfvampire.com/"
-license: MIT
 keywords:
   - AI agents
   - AI teams
