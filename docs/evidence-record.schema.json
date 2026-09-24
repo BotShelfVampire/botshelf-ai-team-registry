@@ -22,6 +22,11 @@
     "evidence_artifacts"
   ],
   "properties": {
+    "$schema": {
+      "type": "string",
+      "format": "uri-reference",
+      "description": "Optional URI reference to the JSON Schema used to validate this record."
+    },
     "schema_version": {
       "type": "string",
       "const": "1.0"
