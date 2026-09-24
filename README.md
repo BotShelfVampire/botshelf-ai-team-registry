@@ -2,7 +2,7 @@
 
 Public source for the **BotShelf Vampire Build Library** and its AI Team implementation/evidence layer: prompt packs, workflow recipes, code sketches, and MCP-oriented tool guidance for local and self-hosted AI workflows. Each evidence record is designed to make the job, runtime, exact implementation, verification state, human approval boundary, failures, and known limits inspectable.
 
-[Browse the canonical Build Library](https://botshelfvampire.com/library/) · [Canonical team pages](https://botshelfvampire.com/library/teams/) · [Machine-readable registry](https://botshelfvampire.com/library/registry.json) · [AI-readable project map](llms.txt)
+[Browse the canonical Build Library](https://botshelfvampire.com/library/) · [Canonical team pages](https://botshelfvampire.com/library/teams/) · [Machine-readable registry](https://botshelfvampire.com/library/registry.json) · [AI-readable project map](llms.txt) · [CodeMeta 4.0](codemeta.json)
 
 ## Choose a job
 
