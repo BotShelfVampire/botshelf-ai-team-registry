@@ -67,6 +67,8 @@ The [Research Desk failure record](examples/evidence-record.research-desk-2026-0
 
 For an evidence-first overview designed for independent editorial review, see the [public media brief](docs/media-brief.md).
 
+For consistent directory submissions, use the [public listing kit](docs/listing-kit.md).
+
 - **Job:** the outcome the AI Team is meant to produce.
 - **Runtime and implementation:** the actual model/runtime path, required setup, and whether the material is a prompt, workflow recipe, code sketch, or tool integration.
 - **Status:** **Verified** only for the exact run evidenced; otherwise **Untested**, **Partial**, **Blocked**, or **Unverified** as applicable.
