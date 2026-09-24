@@ -63,6 +63,8 @@ Canonical BotShelf pages are designed to make implementation claims inspectable 
 
 The [artifact-gate evidence record](examples/evidence-record.artifact-gate.json) is a conservative machine-readable example: it is marked **Partial**, records the checks that ran, keeps unrun model and publisher checks visible, and does not promote a deterministic unit test to a verified AI workflow.
 
+The [Research Desk failure record](examples/evidence-record.research-desk-2026-09-10.json) preserves the September 2026 result as **Blocked**: 0 of 9 answers were accepted, the observed attribution and numerical failures remain visible, and unexecuted external actions are not presented as successful.
+
 For an evidence-first overview designed for independent editorial review, see the [public media brief](docs/media-brief.md).
 
 - **Job:** the outcome the AI Team is meant to produce.
