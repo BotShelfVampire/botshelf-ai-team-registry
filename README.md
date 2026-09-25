@@ -69,6 +69,8 @@ For an evidence-first overview designed for independent editorial review, see th
 
 For consistent directory submissions, use the [public listing kit](docs/listing-kit.md) and its [machine-readable directory manifest](docs/directory-listing.json).
 
+For the current free Launching Next route, use the [verified submission package](docs/launching-next-submission.md). It remains **Prepared / Not Submitted** until a final duplicate, contact, fee, and approval check is completed.
+
 - **Job:** the outcome the AI Team is meant to produce.
 - **Runtime and implementation:** the actual model/runtime path, required setup, and whether the material is a prompt, workflow recipe, code sketch, or tool integration.
 - **Status:** **Verified** only for the exact run evidenced; otherwise **Untested**, **Partial**, **Blocked**, or **Unverified** as applicable.
