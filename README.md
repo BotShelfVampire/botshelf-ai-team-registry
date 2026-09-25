@@ -73,6 +73,8 @@ For the current free Launching Next route, use the [verified submission package]
 
 For Microlaunch, use the [route audit](docs/microlaunch-route-audit.md). Paid options are verified, but the current public pages do not explicitly confirm that the Regular route is free, so the status remains **Audited / Not Submitted**.
 
+For AlternativeTo, use the [free-queue submission package](docs/alternativeto-submission.md). The Marketplace is the listing target, the Build Library remains separate evidence, and the status is **Prepared / Not Submitted**.
+
 - **Job:** the outcome the AI Team is meant to produce.
 - **Runtime and implementation:** the actual model/runtime path, required setup, and whether the material is a prompt, workflow recipe, code sketch, or tool integration.
 - **Status:** **Verified** only for the exact run evidenced; otherwise **Untested**, **Partial**, **Blocked**, or **Unverified** as applicable.
