@@ -80,6 +80,75 @@ for key, value in expected.items():
     if codemeta.get(key) != value:
         fail(f"codemeta.json {key!r} must be {value!r}")
 
+
+directory_listing_path = ROOT / "docs" / "directory-listing.json"
+directory_listing = load_json(directory_listing_path)
+required_listing = {
+    "schemaVersion",
+    "lastUpdated",
+    "product",
+    "separateSurface",
+    "descriptions",
+    "categories",
+    "tags",
+    "verificationStates",
+    "evidence",
+    "claims",
+    "license",
+    "submissionControls",
+}
+if not isinstance(directory_listing, dict):
+    fail("docs/directory-listing.json must be a JSON object")
+missing = sorted(required_listing - directory_listing.keys())
+if missing:
+    fail(f"docs/directory-listing.json is missing required fields: {', '.join(missing)}")
+
+product = directory_listing.get("product", {})
+if product.get("surface") != "build-library":
+    fail("docs/directory-listing.json product.surface must be 'build-library'")
+if product.get("url") != "https://botshelfvampire.com/library/":
+    fail("docs/directory-listing.json must use the canonical Build Library URL")
+
+separate_surface = directory_listing.get("separateSurface", {})
+if separate_surface.get("surface") != "marketplace":
+    fail("docs/directory-listing.json separateSurface.surface must be 'marketplace'")
+if separate_surface.get("separateFromBuildLibrary") is not True:
+    fail("docs/directory-listing.json must keep Marketplace separate from Build Library")
+
+expected_states = ["Verified", "Untested", "Partial", "Blocked", "Unverified"]
+if directory_listing.get("verificationStates") != expected_states:
+    fail("docs/directory-listing.json verificationStates must preserve the canonical ordered states")
+
+evidence = directory_listing.get("evidence", {})
+failed_evidence_url = (
+    "https://github.com/BotShelfVampire/botshelf-ai-team-registry/blob/main/"
+    "examples/evidence-record.research-desk-2026-09-10.json"
+)
+if evidence.get("failedEvaluation") != failed_evidence_url:
+    fail("docs/directory-listing.json must link the canonical failed-evaluation record")
+
+claims = directory_listing.get("claims", {})
+if not claims.get("supported") or not claims.get("prohibited"):
+    fail("docs/directory-listing.json must contain supported and prohibited claims")
+prohibited_text = " ".join(claims["prohibited"]).lower()
+if "open source" not in prohibited_text or "osi-approved" not in prohibited_text:
+    fail("docs/directory-listing.json must prohibit open-source and OSI-approved claims")
+
+license_metadata = directory_listing.get("license", {})
+if license_metadata.get("label") != "custom free-use-at-own-risk license":
+    fail("docs/directory-listing.json must use the repository's custom license wording")
+if license_metadata.get("osiApproved") is not False:
+    fail("docs/directory-listing.json must not claim OSI approval")
+if license_metadata.get("openSourceClaimAllowed") is not False:
+    fail("docs/directory-listing.json must not allow an open-source claim")
+
+controls = directory_listing.get("submissionControls", {})
+for field in ("useOnlyOfficialVerifiedAssets", "requireOfficialRouteCheck", "requireDuplicateCheck", "requireFeeCheck"):
+    if controls.get(field) is not True:
+        fail(f"docs/directory-listing.json submissionControls.{field} must be true")
+if controls.get("externalAcceptanceImplied") is not False:
+    fail("docs/directory-listing.json must not imply external acceptance")
+
 citation = (ROOT / "CITATION.cff").read_text(encoding="utf-8")
 if "license: MIT" in citation:
     fail("CITATION.cff must not claim MIT; the repository uses custom license terms")
@@ -88,4 +157,5 @@ print(f"Validated {schema_path.relative_to(ROOT)}")
 for example_path in example_paths:
     print(f"Validated {example_path.relative_to(ROOT)}")
 print("Validated codemeta.json project invariants")
+print("Validated docs/directory-listing.json submission invariants")
 print("Validated CITATION.cff license invariant")
