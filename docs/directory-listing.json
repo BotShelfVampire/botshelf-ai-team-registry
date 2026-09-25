@@ -1,0 +1,93 @@
+{
+  "schemaVersion": "1.0",
+  "lastUpdated": "2026-09-25",
+  "product": {
+    "name": "BotShelf Vampire Build Library",
+    "surface": "build-library",
+    "url": "https://botshelfvampire.com/library/",
+    "repository": "https://github.com/BotShelfVampire/botshelf-ai-team-registry",
+    "audience": [
+      "developers",
+      "local AI builders",
+      "self-hosted AI builders",
+      "evaluators"
+    ],
+    "availability": "Publicly inspectable under the repository's custom free-use-at-own-risk license"
+  },
+  "separateSurface": {
+    "name": "BotShelf Vampire Marketplace",
+    "surface": "marketplace",
+    "url": "https://botshelfvampire.com/",
+    "separateFromBuildLibrary": true,
+    "rule": "Do not present Build Library records as Marketplace products."
+  },
+  "descriptions": {
+    "oneLine": "Inspect and adapt AI Team workflows by job, runtime, verification state, approval boundary, and failure evidence.",
+    "short": "A public Build Library for inspecting AI Team workflows by job, runtime, implementation, verification state, human approval boundary, and failure evidence.",
+    "medium": "BotShelf Vampire Build Library organizes AI Team implementations by the job performed and the runtime used. Evidence records can expose implementation details, verification state, human approval boundaries, visible failures, known limitations, and produced artifacts. Marketplace listings remain separate."
+  },
+  "categories": [
+    "Developer tools",
+    "AI workflow library",
+    "Local and self-hosted AI",
+    "Agent evaluation",
+    "Evidence tooling"
+  ],
+  "tags": [
+    "AI workflows",
+    "AI teams",
+    "agent evaluation",
+    "developer tools",
+    "local AI",
+    "self-hosted AI",
+    "evidence"
+  ],
+  "verificationStates": [
+    "Verified",
+    "Untested",
+    "Partial",
+    "Blocked",
+    "Unverified"
+  ],
+  "evidence": {
+    "schema": "https://github.com/BotShelfVampire/botshelf-ai-team-registry/blob/main/docs/evidence-record.schema.json",
+    "partialExample": "https://github.com/BotShelfVampire/botshelf-ai-team-registry/blob/main/examples/evidence-record.artifact-gate.json",
+    "failedEvaluation": "https://github.com/BotShelfVampire/botshelf-ai-team-registry/blob/main/examples/evidence-record.research-desk-2026-09-10.json",
+    "originalFailedEvaluation": "https://botshelfvampire.com/cross-ai/proof/research-desk-2026-09-10.html",
+    "validationWorkflow": "https://github.com/BotShelfVampire/botshelf-ai-team-registry/actions/workflows/evidence-metadata.yml",
+    "mediaBrief": "https://github.com/BotShelfVampire/botshelf-ai-team-registry/blob/main/docs/media-brief.md",
+    "humanListingKit": "https://github.com/BotShelfVampire/botshelf-ai-team-registry/blob/main/docs/listing-kit.md"
+  },
+  "claims": {
+    "supported": [
+      "The public repository contains inspectable implementation and evidence materials.",
+      "A machine-readable evidence-record schema is public.",
+      "The repository retains a visible failed evaluation rather than presenting it as a success.",
+      "Public CI checks evidence and discovery metadata structure.",
+      "Marketplace and Build Library are separate product surfaces."
+    ],
+    "prohibited": [
+      "Do not say every team or implementation is verified.",
+      "Do not say schema or CI validity proves accuracy, safety, or production readiness.",
+      "Do not generalize one 0 / 9 accepted evaluation to every BSV workflow.",
+      "Do not call a prompt or single workflow multi-agent without implementation evidence.",
+      "Do not call the repository open source or OSI-approved.",
+      "Do not describe the registry as an MCP server, hosted deployment, or autonomous service unless independently verified.",
+      "Do not claim directory acceptance, publication, or endorsement without observable confirmation.",
+      "Do not invent user counts, revenue, performance metrics, integrations, or customer claims."
+    ]
+  },
+  "license": {
+    "label": "custom free-use-at-own-risk license",
+    "url": "https://github.com/BotShelfVampire/botshelf-ai-team-registry/blob/main/LICENSE",
+    "osiApproved": false,
+    "openSourceClaimAllowed": false
+  },
+  "submissionControls": {
+    "useOnlyOfficialVerifiedAssets": true,
+    "requireOfficialRouteCheck": true,
+    "requireDuplicateCheck": true,
+    "requireFeeCheck": true,
+    "externalAcceptanceImplied": false
+  }
+}
