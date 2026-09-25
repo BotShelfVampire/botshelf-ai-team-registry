@@ -71,6 +71,8 @@ For consistent directory submissions, use the [public listing kit](docs/listing-
 
 For the current free Launching Next route, use the [verified submission package](docs/launching-next-submission.md). It remains **Prepared / Not Submitted** until a final duplicate, contact, fee, and approval check is completed.
 
+For Microlaunch, use the [route audit](docs/microlaunch-route-audit.md). Paid options are verified, but the current public pages do not explicitly confirm that the Regular route is free, so the status remains **Audited / Not Submitted**.
+
 - **Job:** the outcome the AI Team is meant to produce.
 - **Runtime and implementation:** the actual model/runtime path, required setup, and whether the material is a prompt, workflow recipe, code sketch, or tool integration.
 - **Status:** **Verified** only for the exact run evidenced; otherwise **Untested**, **Partial**, **Blocked**, or **Unverified** as applicable.
