@@ -9,6 +9,7 @@ on:
       - "CITATION.cff"
       - "codemeta.json"
       - "docs/evidence-record.schema.json"
+      - "docs/directory-listing.json"
       - "examples/evidence-record*.json"
       - "scripts/validate_metadata.py"
   pull_request:
@@ -17,6 +18,7 @@ on:
       - "CITATION.cff"
       - "codemeta.json"
       - "docs/evidence-record.schema.json"
+      - "docs/directory-listing.json"
       - "examples/evidence-record*.json"
       - "scripts/validate_metadata.py"
   workflow_dispatch:
