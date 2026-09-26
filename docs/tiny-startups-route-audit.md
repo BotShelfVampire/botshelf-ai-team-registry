@@ -55,7 +55,7 @@ Tiny Startups' Terms list the following paid items:
 - Boost purchases: **$29 / $129 / $199**
 - Membership: **$299/year**
 
-The membership page separately advertises a founding price of **$299/year** and says submissions are expedited. The current Terms say payments are processed by Stripe and are final and non-refundable; rejected paid listings receive account credit rather than a cash refund.
+The membership page separately advertises a founding price of **$299/year** and says submissions are expedited. Its public copy is internally inconsistent about renewal: one section says the 12-month payment does not renew automatically, while the FAQ says membership renews annually. The current Terms also say membership renews annually unless cancelled, that Stripe processes payments, and that purchases are final and non-refundable; rejected paid listings receive account credit rather than a cash refund.
 
 These branches were not opened or selected. If a future free submission reaches an upgrade or checkout choice, it must remain on the zero-cost route.
 
