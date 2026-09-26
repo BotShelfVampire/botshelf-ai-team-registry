@@ -83,6 +83,8 @@ For StartupBase, use the [route audit](docs/startupbase-route-audit.md). The sta
 
 For Tiny Startups, use the [route audit](docs/tiny-startups-route-audit.md). The official free review queue is separate from paid upgrades; the Marketplace is the proposed listing target and the Build Library remains its separate evidence layer. Status: **Audited / Not Submitted**.
 
+For SideProjectors, use the [free-route audit](docs/sideprojectors-route-audit.md). Basic project submissions are officially free, the Build Library is prepared as a Showcase while the Marketplace remains separate, and authenticated duplicate checking is still required. Status: **Audited / Prepared / Not Submitted**.
+
 - **Job:** the outcome the AI Team is meant to produce.
 - **Runtime and implementation:** the actual model/runtime path, required setup, and whether the material is a prompt, workflow recipe, code sketch, or tool integration.
 - **Status:** **Verified** only for the exact run evidenced; otherwise **Untested**, **Partial**, **Blocked**, or **Unverified** as applicable.
