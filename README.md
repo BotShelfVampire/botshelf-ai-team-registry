@@ -77,6 +77,8 @@ For AlternativeTo, use the [free-queue submission package](docs/alternativeto-su
 
 For Dev Hunt, use the [free-slot route audit](docs/devhunt-route-audit.md). Weeks below the platform's capacity threshold are free, full weeks are $49, and the status is **Audited / Not Submitted**.
 
+For SaaSHub, use the [route audit](docs/saashub-route-audit.md). The normal submission tool is officially described as free, the featured placement is $99/month, and the status is **Audited / Not Submitted**.
+
 - **Job:** the outcome the AI Team is meant to produce.
 - **Runtime and implementation:** the actual model/runtime path, required setup, and whether the material is a prompt, workflow recipe, code sketch, or tool integration.
 - **Status:** **Verified** only for the exact run evidenced; otherwise **Untested**, **Partial**, **Blocked**, or **Unverified** as applicable.
