@@ -81,6 +81,8 @@ For SaaSHub, use the [route audit](docs/saashub-route-audit.md). The normal subm
 
 For StartupBase, use the [route audit](docs/startupbase-route-audit.md). The standard no-badge community queue is free with an estimated 10+ week wait; badge verification and paid tiers remain excluded, and the status is **Audited / Not Submitted**.
 
+For Tiny Startups, use the [route audit](docs/tiny-startups-route-audit.md). The official free review queue is separate from paid upgrades; the Marketplace is the proposed listing target and the Build Library remains its separate evidence layer. Status: **Audited / Not Submitted**.
+
 - **Job:** the outcome the AI Team is meant to produce.
 - **Runtime and implementation:** the actual model/runtime path, required setup, and whether the material is a prompt, workflow recipe, code sketch, or tool integration.
 - **Status:** **Verified** only for the exact run evidenced; otherwise **Untested**, **Partial**, **Blocked**, or **Unverified** as applicable.
