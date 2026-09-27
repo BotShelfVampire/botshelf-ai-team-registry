@@ -85,6 +85,8 @@ For Tiny Startups, use the [route audit](docs/tiny-startups-route-audit.md). The
 
 For SideProjectors, use the [free-route audit](docs/sideprojectors-route-audit.md). Basic project submissions are officially free, the Build Library is prepared as a Showcase while the Marketplace remains separate, and authenticated duplicate checking is still required. Status: **Audited / Prepared / Not Submitted**.
 
+For Open Launch, use the [route audit](docs/open-launch-route-audit.md). Free launches are currently fully booked into 2027, so the available $12 Premium and $59 SEO paths are excluded. Status: **Audited / Paid-Only Currently / Not Submitted**.
+
 - **Job:** the outcome the AI Team is meant to produce.
 - **Runtime and implementation:** the actual model/runtime path, required setup, and whether the material is a prompt, workflow recipe, code sketch, or tool integration.
 - **Status:** **Verified** only for the exact run evidenced; otherwise **Untested**, **Partial**, **Blocked**, or **Unverified** as applicable.
