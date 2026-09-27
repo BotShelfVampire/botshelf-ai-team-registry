@@ -91,6 +91,8 @@ For Micro SaaS Examples, use the [route audit](docs/micro-saas-examples-route-au
 
 For Dev Resources, use the [route audit](docs/dev-resources-route-audit.md). Its current terms describe a free curated directory and its official GitHub repository accepts rule-compliant contributions; paid advertising remains excluded. The Build Library is the proposed resource and the Marketplace stays separate. Status: **Audited / Prepared / Not Submitted**.
 
+For Startup Buffer, use the [route audit](docs/startup-buffer-route-audit.md). Ordinary review is currently available without payment; paid priority and visibility packages remain excluded. The Marketplace is the proposed listing and the Build Library remains its separate implementation and evidence layer. Status: **Audited / Prepared / Not Submitted**.
+
 - **Job:** the outcome the AI Team is meant to produce.
 - **Runtime and implementation:** the actual model/runtime path, required setup, and whether the material is a prompt, workflow recipe, code sketch, or tool integration.
 - **Status:** **Verified** only for the exact run evidenced; otherwise **Untested**, **Partial**, **Blocked**, or **Unverified** as applicable.
