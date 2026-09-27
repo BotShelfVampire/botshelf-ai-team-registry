@@ -89,6 +89,8 @@ For Open Launch, use the [route audit](docs/open-launch-route-audit.md). Free la
 
 For Micro SaaS Examples, use the [route audit](docs/micro-saas-examples-route-audit.md). The current official form shows only $3, $29, and $147 paid tiers, so no submission or backlink was made. Status: **Audited / Paid-Only / Not Submitted**.
 
+For Dev Resources, use the [route audit](docs/dev-resources-route-audit.md). Its current terms describe a free curated directory and its official GitHub repository accepts rule-compliant contributions; paid advertising remains excluded. The Build Library is the proposed resource and the Marketplace stays separate. Status: **Audited / Prepared / Not Submitted**.
+
 - **Job:** the outcome the AI Team is meant to produce.
 - **Runtime and implementation:** the actual model/runtime path, required setup, and whether the material is a prompt, workflow recipe, code sketch, or tool integration.
 - **Status:** **Verified** only for the exact run evidenced; otherwise **Untested**, **Partial**, **Blocked**, or **Unverified** as applicable.
