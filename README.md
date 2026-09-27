@@ -87,6 +87,8 @@ For SideProjectors, use the [free-route audit](docs/sideprojectors-route-audit.m
 
 For Open Launch, use the [route audit](docs/open-launch-route-audit.md). Free launches are currently fully booked into 2027, so the available $12 Premium and $59 SEO paths are excluded. Status: **Audited / Paid-Only Currently / Not Submitted**.
 
+For Micro SaaS Examples, use the [route audit](docs/micro-saas-examples-route-audit.md). The current official form shows only $3, $29, and $147 paid tiers, so no submission or backlink was made. Status: **Audited / Paid-Only / Not Submitted**.
+
 - **Job:** the outcome the AI Team is meant to produce.
 - **Runtime and implementation:** the actual model/runtime path, required setup, and whether the material is a prompt, workflow recipe, code sketch, or tool integration.
 - **Status:** **Verified** only for the exact run evidenced; otherwise **Untested**, **Partial**, **Blocked**, or **Unverified** as applicable.
