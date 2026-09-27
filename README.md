@@ -93,6 +93,8 @@ For Dev Resources, use the [route audit](docs/dev-resources-route-audit.md). Its
 
 For Startup Buffer, use the [route audit](docs/startup-buffer-route-audit.md). Ordinary review is currently available without payment; paid priority and visibility packages remain excluded. The Marketplace is the proposed listing and the Build Library remains its separate implementation and evidence layer. Status: **Audited / Prepared / Not Submitted**.
 
+For Toolfolio, use the [route audit](docs/toolfolio-route-audit.md). The current public Submit tool route exposes only paid listing and promotion tiers; free claims apply only to existing listings, and no public BSV listing was found. The Build Library is the proposed future subject while the Marketplace remains separate. Status: **Audited / Paid-Only for a New Listing / Not Submitted**.
+
 - **Job:** the outcome the AI Team is meant to produce.
 - **Runtime and implementation:** the actual model/runtime path, required setup, and whether the material is a prompt, workflow recipe, code sketch, or tool integration.
 - **Status:** **Verified** only for the exact run evidenced; otherwise **Untested**, **Partial**, **Blocked**, or **Unverified** as applicable.
