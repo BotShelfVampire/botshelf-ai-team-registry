@@ -73,6 +73,8 @@ For the current free Launching Next route, use the [verified submission package]
 
 For Product Hunt, use the [free-launch route audit and owner-review package](docs/product-hunt-route-audit.md). The Marketplace is the proposed product, the Build Library remains separate supporting evidence, advertising is excluded, and the status is **Audited / Prepared / Not Submitted / Not Scheduled**.
 
+For Hacker News, use the [Show HN route audit](docs/hacker-news-route-audit.md). The Build Library is the proposed technical artifact and the Marketplace remains separate. The package is **Audited / Prepared / Not Submitted**; posting requires an owner-authorized maker to rewrite the comment in their own words, participate without generated text, and never solicit votes or comments.
+
 For Microlaunch, use the [route audit](docs/microlaunch-route-audit.md). Paid options are verified, but the current public pages do not explicitly confirm that the Regular route is free, so the status remains **Audited / Not Submitted**.
 
 For AlternativeTo, use the [free-queue submission package](docs/alternativeto-submission.md). The Marketplace is the listing target, the Build Library remains separate evidence, and the status is **Prepared / Not Submitted**.
