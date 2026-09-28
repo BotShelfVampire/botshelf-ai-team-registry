@@ -261,5 +261,6 @@ print(f"Validated {schema_path.relative_to(ROOT)}")
 for example_path in example_paths:
     print(f"Validated {example_path.relative_to(ROOT)}")
 print("Validated codemeta.json project invariants")
-print("Validated docs/directory-listing.json submission invariants")\nprint("Validated docs/directory-route-status.json against its schema and lifecycle invariants")
+print("Validated docs/directory-listing.json submission invariants")
+print("Validated docs/directory-route-status.json against its schema and lifecycle invariants")
 print("Validated CITATION.cff license invariant")
