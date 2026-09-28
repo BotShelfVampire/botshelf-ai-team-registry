@@ -95,6 +95,8 @@ For Startup Buffer, use the [route audit](docs/startup-buffer-route-audit.md). O
 
 For Toolfolio, use the [route audit](docs/toolfolio-route-audit.md). The current public Submit tool route exposes only paid listing and promotion tiers; free claims apply only to existing listings, and no public BSV listing was found. The Build Library is the proposed future subject while the Marketplace remains separate. Status: **Audited / Paid-Only for a New Listing / Not Submitted**.
 
+For Ctrl Alt CC, use the [route audit](docs/ctrl-alt-cc-route-audit.md). The public signed-out pages do not expose an official current fee schedule, and the site's terms prohibit automated or non-human access. No account or submission was created. The Build Library is the proposed subject while the Marketplace remains separate. Status: **Audited / Route Not Officially Verifiable Without an Account / Not Submitted**.
+
 - **Job:** the outcome the AI Team is meant to produce.
 - **Runtime and implementation:** the actual model/runtime path, required setup, and whether the material is a prompt, workflow recipe, code sketch, or tool integration.
 - **Status:** **Verified** only for the exact run evidenced; otherwise **Untested**, **Partial**, **Blocked**, or **Unverified** as applicable.
