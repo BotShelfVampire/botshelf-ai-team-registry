@@ -1,0 +1,490 @@
+{
+  "$schema": "https://github.com/BotShelfVampire/botshelf-ai-team-registry/blob/main/docs/directory-route-status.schema.json",
+  "schemaVersion": "1.0",
+  "lastUpdated": "2026-09-28",
+  "timeZone": "Asia/Tokyo",
+  "purpose": "Machine-readable directory route audit status for de-duplication, fee control, product-surface separation, and externally verifiable lifecycle tracking.",
+  "countingRule": "An audit or prepared package is not a submission, acceptance, or publication. Count a submitted or published state only when a confirmation receipt or live URL is independently observable.",
+  "surfaceSeparation": {
+    "marketplace": "https://botshelfvampire.com/",
+    "buildLibrary": "https://botshelfvampire.com/library/",
+    "distinct": true
+  },
+  "routeCount": 14,
+  "summary": {
+    "byZeroCostClassification": {
+      "verified-free": 8,
+      "conditional-free": 1,
+      "unverified": 2,
+      "temporarily-unavailable": 1,
+      "paid-only": 2
+    },
+    "submitted": 0,
+    "accepted": 0,
+    "published": 0
+  },
+  "routes": [
+    {
+      "id": "launching-next",
+      "name": "Launching Next",
+      "proposedSurface": "build-library",
+      "zeroCostPath": {
+        "classification": "verified-free",
+        "description": "Standard submission is free; the optional $99 fast-track is excluded.",
+        "currentlyActionable": true
+      },
+      "lifecycle": {
+        "audited": true,
+        "prepared": true,
+        "submitted": false,
+        "accepted": false,
+        "published": false
+      },
+      "automation": {
+        "automatedSubmissionPermitted": false,
+        "manualOwnerActionRequired": true,
+        "reason": "Final submission transmits an approved contact identity and requires action-time owner confirmation."
+      },
+      "blocker": "Approved contact identity, duplicate/history check, and owner confirmation remain unresolved.",
+      "nextAction": "Recheck the official free route, duplicate state, contact identity, and fee before one authorized submission.",
+      "audit": {
+        "path": "docs/launching-next-submission.md",
+        "url": "https://github.com/BotShelfVampire/botshelf-ai-team-registry/blob/main/docs/launching-next-submission.md"
+      },
+      "paidAlternativesExcluded": true,
+      "externalEvidence": {
+        "confirmationReceipt": null,
+        "liveUrl": null
+      }
+    },
+    {
+      "id": "microlaunch",
+      "name": "Microlaunch",
+      "proposedSurface": "build-library",
+      "zeroCostPath": {
+        "classification": "unverified",
+        "description": "The public pages distinguish a Regular launch from paid plans but do not confirm that Regular costs $0.",
+        "currentlyActionable": false
+      },
+      "lifecycle": {
+        "audited": true,
+        "prepared": true,
+        "submitted": false,
+        "accepted": false,
+        "published": false
+      },
+      "automation": {
+        "automatedSubmissionPermitted": false,
+        "manualOwnerActionRequired": true,
+        "reason": "Authenticated Product HQ must confirm a zero-dollar Regular route."
+      },
+      "blocker": "Official $0 status and private draft history are unverified.",
+      "nextAction": "Proceed only if the authenticated live route explicitly shows $0 and no duplicate exists.",
+      "audit": {
+        "path": "docs/microlaunch-route-audit.md",
+        "url": "https://github.com/BotShelfVampire/botshelf-ai-team-registry/blob/main/docs/microlaunch-route-audit.md"
+      },
+      "paidAlternativesExcluded": true,
+      "externalEvidence": {
+        "confirmationReceipt": null,
+        "liveUrl": null
+      }
+    },
+    {
+      "id": "alternativeto",
+      "name": "AlternativeTo",
+      "proposedSurface": "marketplace",
+      "zeroCostPath": {
+        "classification": "verified-free",
+        "description": "The standard review queue is free; paid priority review is excluded.",
+        "currentlyActionable": true
+      },
+      "lifecycle": {
+        "audited": true,
+        "prepared": true,
+        "submitted": false,
+        "accepted": false,
+        "published": false
+      },
+      "automation": {
+        "automatedSubmissionPermitted": false,
+        "manualOwnerActionRequired": true,
+        "reason": "Sign-in and approved contact details are required for submission."
+      },
+      "blocker": "Authenticated duplicate and draft history plus final owner confirmation remain unresolved.",
+      "nextAction": "Use only the standard free queue after authenticated duplicate and fee checks.",
+      "audit": {
+        "path": "docs/alternativeto-submission.md",
+        "url": "https://github.com/BotShelfVampire/botshelf-ai-team-registry/blob/main/docs/alternativeto-submission.md"
+      },
+      "paidAlternativesExcluded": true,
+      "externalEvidence": {
+        "confirmationReceipt": null,
+        "liveUrl": null
+      }
+    },
+    {
+      "id": "dev-hunt",
+      "name": "Dev Hunt",
+      "proposedSurface": "build-library",
+      "zeroCostPath": {
+        "classification": "conditional-free",
+        "description": "A launch week is free only while it contains fewer than 15 tools; otherwise the week shows $49.",
+        "currentlyActionable": false
+      },
+      "lifecycle": {
+        "audited": true,
+        "prepared": true,
+        "submitted": false,
+        "accepted": false,
+        "published": false
+      },
+      "automation": {
+        "automatedSubmissionPermitted": false,
+        "manualOwnerActionRequired": true,
+        "reason": "Live authenticated capacity can change before submission."
+      },
+      "blocker": "Current free-week inventory and private draft history are unverified.",
+      "nextAction": "Proceed only if the authenticated selector still shows a $0 week at submission time.",
+      "audit": {
+        "path": "docs/devhunt-route-audit.md",
+        "url": "https://github.com/BotShelfVampire/botshelf-ai-team-registry/blob/main/docs/devhunt-route-audit.md"
+      },
+      "paidAlternativesExcluded": true,
+      "externalEvidence": {
+        "confirmationReceipt": null,
+        "liveUrl": null
+      }
+    },
+    {
+      "id": "saashub",
+      "name": "SaaSHub",
+      "proposedSurface": "build-library",
+      "zeroCostPath": {
+        "classification": "verified-free",
+        "description": "The normal submission tool is officially described as free; Featured Product at $99 per month is excluded.",
+        "currentlyActionable": true
+      },
+      "lifecycle": {
+        "audited": true,
+        "prepared": true,
+        "submitted": false,
+        "accepted": false,
+        "published": false
+      },
+      "automation": {
+        "automatedSubmissionPermitted": false,
+        "manualOwnerActionRequired": true,
+        "reason": "Final ownership, category, duplicate, and account-history checks are required."
+      },
+      "blocker": "Account-level duplicate history and final ownership details remain unresolved.",
+      "nextAction": "Use only the normal free form after final checks.",
+      "audit": {
+        "path": "docs/saashub-route-audit.md",
+        "url": "https://github.com/BotShelfVampire/botshelf-ai-team-registry/blob/main/docs/saashub-route-audit.md"
+      },
+      "paidAlternativesExcluded": true,
+      "externalEvidence": {
+        "confirmationReceipt": null,
+        "liveUrl": null
+      }
+    },
+    {
+      "id": "startupbase",
+      "name": "StartupBase",
+      "proposedSurface": "build-library",
+      "zeroCostPath": {
+        "classification": "verified-free",
+        "description": "The standard no-badge community queue is free; badge and paid routes are excluded.",
+        "currentlyActionable": true
+      },
+      "lifecycle": {
+        "audited": true,
+        "prepared": true,
+        "submitted": false,
+        "accepted": false,
+        "published": false
+      },
+      "automation": {
+        "automatedSubmissionPermitted": false,
+        "manualOwnerActionRequired": true,
+        "reason": "Account history and the one-free-launch allowance require owner-controlled authentication."
+      },
+      "blocker": "Authenticated history, free-launch availability, assets, and owner approval remain unresolved.",
+      "nextAction": "Use only the standard no-badge $0 queue after live checks.",
+      "audit": {
+        "path": "docs/startupbase-route-audit.md",
+        "url": "https://github.com/BotShelfVampire/botshelf-ai-team-registry/blob/main/docs/startupbase-route-audit.md"
+      },
+      "paidAlternativesExcluded": true,
+      "externalEvidence": {
+        "confirmationReceipt": null,
+        "liveUrl": null
+      }
+    },
+    {
+      "id": "tiny-startups",
+      "name": "Tiny Startups",
+      "proposedSurface": "marketplace",
+      "zeroCostPath": {
+        "classification": "verified-free",
+        "description": "The official free review queue is separate from paid upgrades.",
+        "currentlyActionable": true
+      },
+      "lifecycle": {
+        "audited": true,
+        "prepared": true,
+        "submitted": false,
+        "accepted": false,
+        "published": false
+      },
+      "automation": {
+        "automatedSubmissionPermitted": false,
+        "manualOwnerActionRequired": true,
+        "reason": "The final flow collects business and operator information and includes an upgrades step."
+      },
+      "blocker": "Authenticated draft history and approved submission details remain unresolved.",
+      "nextAction": "Use the free route only and stop before any paid upgrade or checkout.",
+      "audit": {
+        "path": "docs/tiny-startups-route-audit.md",
+        "url": "https://github.com/BotShelfVampire/botshelf-ai-team-registry/blob/main/docs/tiny-startups-route-audit.md"
+      },
+      "paidAlternativesExcluded": true,
+      "externalEvidence": {
+        "confirmationReceipt": null,
+        "liveUrl": null
+      }
+    },
+    {
+      "id": "sideprojectors",
+      "name": "SideProjectors",
+      "proposedSurface": "build-library",
+      "zeroCostPath": {
+        "classification": "verified-free",
+        "description": "Basic Showcase submission is available at $0 per month.",
+        "currentlyActionable": true
+      },
+      "lifecycle": {
+        "audited": true,
+        "prepared": true,
+        "submitted": false,
+        "accepted": false,
+        "published": false
+      },
+      "automation": {
+        "automatedSubmissionPermitted": false,
+        "manualOwnerActionRequired": true,
+        "reason": "Submission requires an account and review."
+      },
+      "blocker": "Private projects, drafts, pending reviews, and prior rejections are unverified.",
+      "nextAction": "Inspect account history, then use only the free Showcase route if no duplicate exists.",
+      "audit": {
+        "path": "docs/sideprojectors-route-audit.md",
+        "url": "https://github.com/BotShelfVampire/botshelf-ai-team-registry/blob/main/docs/sideprojectors-route-audit.md"
+      },
+      "paidAlternativesExcluded": true,
+      "externalEvidence": {
+        "confirmationReceipt": null,
+        "liveUrl": null
+      }
+    },
+    {
+      "id": "open-launch",
+      "name": "Open Launch",
+      "proposedSurface": "build-library",
+      "zeroCostPath": {
+        "classification": "temporarily-unavailable",
+        "description": "Free Launch is $0 but its slots are fully booked into 2027; immediate routes are paid.",
+        "currentlyActionable": false
+      },
+      "lifecycle": {
+        "audited": true,
+        "prepared": false,
+        "submitted": false,
+        "accepted": false,
+        "published": false
+      },
+      "automation": {
+        "automatedSubmissionPermitted": false,
+        "manualOwnerActionRequired": true,
+        "reason": "No current zero-dollar slot is available."
+      },
+      "blocker": "The free queue is unavailable and authenticated draft history is unverified.",
+      "nextAction": "Recheck only when official free slots reopen; do not join paid or reservation paths.",
+      "audit": {
+        "path": "docs/open-launch-route-audit.md",
+        "url": "https://github.com/BotShelfVampire/botshelf-ai-team-registry/blob/main/docs/open-launch-route-audit.md"
+      },
+      "paidAlternativesExcluded": true,
+      "externalEvidence": {
+        "confirmationReceipt": null,
+        "liveUrl": null
+      }
+    },
+    {
+      "id": "micro-saas-examples",
+      "name": "Micro SaaS Examples",
+      "proposedSurface": "marketplace",
+      "zeroCostPath": {
+        "classification": "paid-only",
+        "description": "The official form currently shows only $3, $29, and $147 tiers.",
+        "currentlyActionable": false
+      },
+      "lifecycle": {
+        "audited": true,
+        "prepared": false,
+        "submitted": false,
+        "accepted": false,
+        "published": false
+      },
+      "automation": {
+        "automatedSubmissionPermitted": false,
+        "manualOwnerActionRequired": true,
+        "reason": "Every visible submission route requires payment; the Basic tier also requires a backlink."
+      },
+      "blocker": "No public zero-dollar route is available.",
+      "nextAction": "Reconsider only if an official $0 route appears without a badge or backlink requirement.",
+      "audit": {
+        "path": "docs/micro-saas-examples-route-audit.md",
+        "url": "https://github.com/BotShelfVampire/botshelf-ai-team-registry/blob/main/docs/micro-saas-examples-route-audit.md"
+      },
+      "paidAlternativesExcluded": true,
+      "externalEvidence": {
+        "confirmationReceipt": null,
+        "liveUrl": null
+      }
+    },
+    {
+      "id": "dev-resources",
+      "name": "Dev Resources",
+      "proposedSurface": "build-library",
+      "zeroCostPath": {
+        "classification": "verified-free",
+        "description": "The curated directory and its rule-compliant GitHub contribution route are free.",
+        "currentlyActionable": true
+      },
+      "lifecycle": {
+        "audited": true,
+        "prepared": true,
+        "submitted": false,
+        "accepted": false,
+        "published": false
+      },
+      "automation": {
+        "automatedSubmissionPermitted": false,
+        "manualOwnerActionRequired": true,
+        "reason": "A form, issue, or pull request would be an external representational action."
+      },
+      "blocker": "Authenticated history and the exact live form state remain unverified.",
+      "nextAction": "Check history and duplicates, then use exactly one official free route.",
+      "audit": {
+        "path": "docs/dev-resources-route-audit.md",
+        "url": "https://github.com/BotShelfVampire/botshelf-ai-team-registry/blob/main/docs/dev-resources-route-audit.md"
+      },
+      "paidAlternativesExcluded": true,
+      "externalEvidence": {
+        "confirmationReceipt": null,
+        "liveUrl": null
+      }
+    },
+    {
+      "id": "startup-buffer",
+      "name": "Startup Buffer",
+      "proposedSurface": "marketplace",
+      "zeroCostPath": {
+        "classification": "verified-free",
+        "description": "Ordinary review is free; paid priority and visibility packages are excluded.",
+        "currentlyActionable": true
+      },
+      "lifecycle": {
+        "audited": true,
+        "prepared": true,
+        "submitted": false,
+        "accepted": false,
+        "published": false
+      },
+      "automation": {
+        "automatedSubmissionPermitted": false,
+        "manualOwnerActionRequired": true,
+        "reason": "Submission transmits a business email and screenshot and creates a private edit link."
+      },
+      "blocker": "Private drafts, business email, and approved screenshot remain unresolved.",
+      "nextAction": "Use only ordinary $0 review after checking account history and final assets.",
+      "audit": {
+        "path": "docs/startup-buffer-route-audit.md",
+        "url": "https://github.com/BotShelfVampire/botshelf-ai-team-registry/blob/main/docs/startup-buffer-route-audit.md"
+      },
+      "paidAlternativesExcluded": true,
+      "externalEvidence": {
+        "confirmationReceipt": null,
+        "liveUrl": null
+      }
+    },
+    {
+      "id": "toolfolio",
+      "name": "Toolfolio",
+      "proposedSurface": "build-library",
+      "zeroCostPath": {
+        "classification": "paid-only",
+        "description": "No public $0 new-listing path exists; free claim applies only to an existing entry.",
+        "currentlyActionable": false
+      },
+      "lifecycle": {
+        "audited": true,
+        "prepared": true,
+        "submitted": false,
+        "accepted": false,
+        "published": false
+      },
+      "automation": {
+        "automatedSubmissionPermitted": false,
+        "manualOwnerActionRequired": true,
+        "reason": "The new-listing route starts at $150 and contains conflicting refund language."
+      },
+      "blocker": "No free new-listing route or public BSV entry to claim is observable.",
+      "nextAction": "Reconsider only if an explicit $0 route or independently created claimable entry appears.",
+      "audit": {
+        "path": "docs/toolfolio-route-audit.md",
+        "url": "https://github.com/BotShelfVampire/botshelf-ai-team-registry/blob/main/docs/toolfolio-route-audit.md"
+      },
+      "paidAlternativesExcluded": true,
+      "externalEvidence": {
+        "confirmationReceipt": null,
+        "liveUrl": null
+      }
+    },
+    {
+      "id": "ctrl-alt-cc",
+      "name": "Ctrl Alt CC",
+      "proposedSurface": "build-library",
+      "zeroCostPath": {
+        "classification": "unverified",
+        "description": "Signed-out official pages do not expose a current fee schedule or full submission form.",
+        "currentlyActionable": false
+      },
+      "lifecycle": {
+        "audited": true,
+        "prepared": false,
+        "submitted": false,
+        "accepted": false,
+        "published": false
+      },
+      "automation": {
+        "automatedSubmissionPermitted": false,
+        "manualOwnerActionRequired": true,
+        "reason": "Official terms prohibit automated or non-human access."
+      },
+      "blocker": "No verified signed-out $0 route, no authenticated history, and no permissible automated submission route.",
+      "nextAction": "Only the owner may manually recheck the live form and terms in a normal browser session.",
+      "audit": {
+        "path": "docs/ctrl-alt-cc-route-audit.md",
+        "url": "https://github.com/BotShelfVampire/botshelf-ai-team-registry/blob/main/docs/ctrl-alt-cc-route-audit.md"
+      },
+      "paidAlternativesExcluded": true,
+      "externalEvidence": {
+        "confirmationReceipt": null,
+        "liveUrl": null
+      }
+    }
+  ]
+}
