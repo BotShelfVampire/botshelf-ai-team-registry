@@ -149,6 +149,110 @@ for field in ("useOnlyOfficialVerifiedAssets", "requireOfficialRouteCheck", "req
 if controls.get("externalAcceptanceImplied") is not False:
     fail("docs/directory-listing.json must not imply external acceptance")
 
+route_status_schema_path = ROOT / "docs" / "directory-route-status.schema.json"
+route_status_path = ROOT / "docs" / "directory-route-status.json"
+route_status_schema = load_json(route_status_schema_path)
+route_status = load_json(route_status_path)
+
+try:
+    Draft202012Validator.check_schema(route_status_schema)
+except Exception as exc:
+    fail(
+        f"{route_status_schema_path.relative_to(ROOT)} is not a valid "
+        f"Draft 2020-12 schema: {exc}"
+    )
+
+route_status_validator = Draft202012Validator(
+    route_status_schema,
+    format_checker=FormatChecker(),
+)
+route_status_errors = sorted(
+    route_status_validator.iter_errors(route_status),
+    key=lambda error: list(error.absolute_path),
+)
+if route_status_errors:
+    for error in route_status_errors:
+        location = ".".join(str(part) for part in error.absolute_path) or "<root>"
+        print(
+            f"ERROR: {route_status_path.relative_to(ROOT)}:{location}: {error.message}",
+            file=sys.stderr,
+        )
+    raise SystemExit(1)
+
+routes = route_status["routes"]
+if route_status["routeCount"] != len(routes):
+    fail("docs/directory-route-status.json routeCount must equal the number of routes")
+
+route_ids = [route["id"] for route in routes]
+route_names = [route["name"] for route in routes]
+if len(route_ids) != len(set(route_ids)):
+    fail("docs/directory-route-status.json route ids must be unique")
+if len(route_names) != len(set(route_names)):
+    fail("docs/directory-route-status.json route names must be unique")
+
+classification_counts = {
+    "verified-free": 0,
+    "conditional-free": 0,
+    "unverified": 0,
+    "temporarily-unavailable": 0,
+    "paid-only": 0,
+}
+lifecycle_counts = {"submitted": 0, "accepted": 0, "published": 0}
+
+for route in routes:
+    classification = route["zeroCostPath"]["classification"]
+    classification_counts[classification] += 1
+
+    lifecycle = route["lifecycle"]
+    for state in lifecycle_counts:
+        lifecycle_counts[state] += int(lifecycle[state])
+
+    if lifecycle["accepted"] and not lifecycle["submitted"]:
+        fail(f"directory route {route['id']!r} cannot be accepted before submission")
+    if lifecycle["published"] and not lifecycle["accepted"]:
+        fail(f"directory route {route['id']!r} cannot be published before acceptance")
+
+    evidence = route["externalEvidence"]
+    if lifecycle["submitted"] and not evidence["confirmationReceipt"]:
+        fail(f"directory route {route['id']!r} needs a confirmationReceipt when submitted")
+    if lifecycle["published"] and not evidence["liveUrl"]:
+        fail(f"directory route {route['id']!r} needs a liveUrl when published")
+
+    if classification in {"paid-only", "temporarily-unavailable", "unverified"}:
+        if route["zeroCostPath"]["currentlyActionable"]:
+            fail(
+                f"directory route {route['id']!r} cannot be currently actionable "
+                f"with classification {classification!r}"
+            )
+
+    automation = route["automation"]
+    if not automation["automatedSubmissionPermitted"] and not automation["manualOwnerActionRequired"]:
+        fail(
+            f"directory route {route['id']!r} must preserve a manual owner gate "
+            "when automated submission is not permitted"
+        )
+
+    audit_path = ROOT / route["audit"]["path"]
+    if not audit_path.is_file():
+        fail(
+            f"directory route {route['id']!r} references missing audit file "
+            f"{route['audit']['path']!r}"
+        )
+
+summary = route_status["summary"]
+if summary["byZeroCostClassification"] != classification_counts:
+    fail(
+        "docs/directory-route-status.json classification summary must match "
+        "the route records"
+    )
+for state, count in lifecycle_counts.items():
+    if summary[state] != count:
+        fail(
+            f"docs/directory-route-status.json summary.{state} must match "
+            "the route records"
+        )
+
+
 citation = (ROOT / "CITATION.cff").read_text(encoding="utf-8")
 if "license: MIT" in citation:
     fail("CITATION.cff must not claim MIT; the repository uses custom license terms")
@@ -157,5 +261,5 @@ print(f"Validated {schema_path.relative_to(ROOT)}")
 for example_path in example_paths:
     print(f"Validated {example_path.relative_to(ROOT)}")
 print("Validated codemeta.json project invariants")
-print("Validated docs/directory-listing.json submission invariants")
+print("Validated docs/directory-listing.json submission invariants")\nprint("Validated docs/directory-route-status.json against its schema and lifecycle invariants")
 print("Validated CITATION.cff license invariant")
