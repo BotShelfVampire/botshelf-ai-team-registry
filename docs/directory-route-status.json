@@ -10,10 +10,10 @@
     "buildLibrary": "https://botshelfvampire.com/library/",
     "distinct": true
   },
-  "routeCount": 15,
+  "routeCount": 16,
   "summary": {
     "byZeroCostClassification": {
-      "verified-free": 9,
+      "verified-free": 10,
       "conditional-free": 1,
       "unverified": 2,
       "temporarily-unavailable": 1,
@@ -83,6 +83,39 @@
       "audit": {
         "path": "docs/product-hunt-route-audit.md",
         "url": "https://github.com/BotShelfVampire/botshelf-ai-team-registry/blob/main/docs/product-hunt-route-audit.md"
+      },
+      "paidAlternativesExcluded": true,
+      "externalEvidence": {
+        "confirmationReceipt": null,
+        "liveUrl": null
+      }
+    },
+    {
+      "id": "hacker-news",
+      "name": "Hacker News / Show HN",
+      "proposedSurface": "build-library",
+      "zeroCostPath": {
+        "classification": "verified-free",
+        "description": "The ordinary official submit route requires an account but presents no fee or checkout; vote solicitation and paid visibility are excluded.",
+        "currentlyActionable": true
+      },
+      "lifecycle": {
+        "audited": true,
+        "prepared": true,
+        "submitted": false,
+        "accepted": false,
+        "published": false
+      },
+      "automation": {
+        "automatedSubmissionPermitted": false,
+        "manualOwnerActionRequired": true,
+        "reason": "Show HN requires a maker who personally worked on the project, is available to discuss it, and does not post generated or AI-edited comments."
+      },
+      "blocker": "Authorized account history, maker identity, and human availability for authentic discussion are unverified; the prepared comment must be independently rewritten by the maker.",
+      "nextAction": "An owner-authorized maker should perform the final duplicate and fee checks, rewrite the comment in their own words, post once, and never solicit votes or comments.",
+      "audit": {
+        "path": "docs/hacker-news-route-audit.md",
+        "url": "https://github.com/BotShelfVampire/botshelf-ai-team-registry/blob/main/docs/hacker-news-route-audit.md"
       },
       "paidAlternativesExcluded": true,
       "externalEvidence": {
