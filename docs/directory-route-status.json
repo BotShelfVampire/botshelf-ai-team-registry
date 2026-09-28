@@ -1,7 +1,7 @@
 {
   "$schema": "https://github.com/BotShelfVampire/botshelf-ai-team-registry/blob/main/docs/directory-route-status.schema.json",
   "schemaVersion": "1.0",
-  "lastUpdated": "2026-09-28",
+  "lastUpdated": "2026-09-29",
   "timeZone": "Asia/Tokyo",
   "purpose": "Machine-readable directory route audit status for de-duplication, fee control, product-surface separation, and externally verifiable lifecycle tracking.",
   "countingRule": "An audit or prepared package is not a submission, acceptance, or publication. Count a submitted or published state only when a confirmation receipt or live URL is independently observable.",
@@ -10,10 +10,10 @@
     "buildLibrary": "https://botshelfvampire.com/library/",
     "distinct": true
   },
-  "routeCount": 14,
+  "routeCount": 15,
   "summary": {
     "byZeroCostClassification": {
-      "verified-free": 8,
+      "verified-free": 9,
       "conditional-free": 1,
       "unverified": 2,
       "temporarily-unavailable": 1,
@@ -50,6 +50,39 @@
       "audit": {
         "path": "docs/launching-next-submission.md",
         "url": "https://github.com/BotShelfVampire/botshelf-ai-team-registry/blob/main/docs/launching-next-submission.md"
+      },
+      "paidAlternativesExcluded": true,
+      "externalEvidence": {
+        "confirmationReceipt": null,
+        "liveUrl": null
+      }
+    },
+    {
+      "id": "product-hunt",
+      "name": "Product Hunt",
+      "proposedSurface": "marketplace",
+      "zeroCostPath": {
+        "classification": "verified-free",
+        "description": "The standard Product Hunt launch is officially free; optional advertising and managed campaigns are excluded.",
+        "currentlyActionable": true
+      },
+      "lifecycle": {
+        "audited": true,
+        "prepared": true,
+        "submitted": false,
+        "accepted": false,
+        "published": false
+      },
+      "automation": {
+        "automatedSubmissionPermitted": false,
+        "manualOwnerActionRequired": true,
+        "reason": "A personal maker account, approved assets, first comment, and exact launch schedule require owner-controlled action."
+      },
+      "blocker": "Authorized account history, maker identity, approved assets, and final owner-approved launch date remain unresolved.",
+      "nextAction": "Use only the free launch path after checking private drafts and prior domain launches, approving assets and identity, and confirming the exact schedule.",
+      "audit": {
+        "path": "docs/product-hunt-route-audit.md",
+        "url": "https://github.com/BotShelfVampire/botshelf-ai-team-registry/blob/main/docs/product-hunt-route-audit.md"
       },
       "paidAlternativesExcluded": true,
       "externalEvidence": {
