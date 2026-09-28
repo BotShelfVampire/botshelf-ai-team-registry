@@ -1,0 +1,294 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/BotShelfVampire/botshelf-ai-team-registry/blob/main/docs/directory-route-status.schema.json",
+  "title": "BotShelf Vampire directory route status",
+  "description": "Schema for audited directory routes without implying submission, acceptance, or publication.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "$schema",
+    "schemaVersion",
+    "lastUpdated",
+    "timeZone",
+    "purpose",
+    "countingRule",
+    "surfaceSeparation",
+    "routeCount",
+    "summary",
+    "routes"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "1.0"
+    },
+    "lastUpdated": {
+      "type": "string",
+      "format": "date"
+    },
+    "timeZone": {
+      "const": "Asia/Tokyo"
+    },
+    "purpose": {
+      "type": "string",
+      "minLength": 1
+    },
+    "countingRule": {
+      "type": "string",
+      "minLength": 1
+    },
+    "surfaceSeparation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "marketplace",
+        "buildLibrary",
+        "distinct"
+      ],
+      "properties": {
+        "marketplace": {
+          "const": "https://botshelfvampire.com/"
+        },
+        "buildLibrary": {
+          "const": "https://botshelfvampire.com/library/"
+        },
+        "distinct": {
+          "const": true
+        }
+      }
+    },
+    "routeCount": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "byZeroCostClassification",
+        "submitted",
+        "accepted",
+        "published"
+      ],
+      "properties": {
+        "byZeroCostClassification": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "verified-free",
+            "conditional-free",
+            "unverified",
+            "temporarily-unavailable",
+            "paid-only"
+          ],
+          "properties": {
+            "verified-free": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "conditional-free": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "unverified": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "temporarily-unavailable": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "paid-only": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        },
+        "submitted": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "accepted": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "published": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "routes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/route"
+      }
+    },
+    "$schema": {
+      "const": "https://github.com/BotShelfVampire/botshelf-ai-team-registry/blob/main/docs/directory-route-status.schema.json"
+    }
+  },
+  "$defs": {
+    "route": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "name",
+        "proposedSurface",
+        "zeroCostPath",
+        "lifecycle",
+        "automation",
+        "blocker",
+        "nextAction",
+        "audit",
+        "paidAlternativesExcluded",
+        "externalEvidence"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "proposedSurface": {
+          "enum": [
+            "marketplace",
+            "build-library"
+          ]
+        },
+        "zeroCostPath": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "classification",
+            "description",
+            "currentlyActionable"
+          ],
+          "properties": {
+            "classification": {
+              "enum": [
+                "verified-free",
+                "conditional-free",
+                "unverified",
+                "temporarily-unavailable",
+                "paid-only"
+              ]
+            },
+            "description": {
+              "type": "string",
+              "minLength": 1
+            },
+            "currentlyActionable": {
+              "type": "boolean"
+            }
+          }
+        },
+        "lifecycle": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "audited",
+            "prepared",
+            "submitted",
+            "accepted",
+            "published"
+          ],
+          "properties": {
+            "audited": {
+              "type": "boolean"
+            },
+            "prepared": {
+              "type": "boolean"
+            },
+            "submitted": {
+              "type": "boolean"
+            },
+            "accepted": {
+              "type": "boolean"
+            },
+            "published": {
+              "type": "boolean"
+            }
+          }
+        },
+        "automation": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "automatedSubmissionPermitted",
+            "manualOwnerActionRequired",
+            "reason"
+          ],
+          "properties": {
+            "automatedSubmissionPermitted": {
+              "type": "boolean"
+            },
+            "manualOwnerActionRequired": {
+              "type": "boolean"
+            },
+            "reason": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "blocker": {
+          "type": "string",
+          "minLength": 1
+        },
+        "nextAction": {
+          "type": "string",
+          "minLength": 1
+        },
+        "audit": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "path",
+            "url"
+          ],
+          "properties": {
+            "path": {
+              "type": "string",
+              "pattern": "^docs/.+\\.md$"
+            },
+            "url": {
+              "type": "string",
+              "format": "uri"
+            }
+          }
+        },
+        "paidAlternativesExcluded": {
+          "const": true
+        },
+        "externalEvidence": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "confirmationReceipt",
+            "liveUrl"
+          ],
+          "properties": {
+            "confirmationReceipt": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "liveUrl": {
+              "type": [
+                "string",
+                "null"
+              ],
+              "format": "uri"
+            }
+          }
+        }
+      }
+    }
+  }
+}
