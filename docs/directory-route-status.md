@@ -1,6 +1,6 @@
 # Directory Route Status
 
-Updated: 2026-09-28 (Asia/Tokyo)
+Updated: 2026-09-29 (Asia/Tokyo)
 
 This index consolidates the public route audits and prepared submission packages for BotShelf Vampire. It is an operational de-duplication and accuracy aid. It does **not** record or imply that a route has been submitted, accepted, scheduled, or published.
 
@@ -22,6 +22,7 @@ This index consolidates the public route audits and prepared submission packages
 | Route | Proposed subject | Official $0 path | Current status | Primary blocker | Public audit or package |
 | --- | --- | --- | --- | --- | --- |
 | Launching Next | Build Library | Standard submission is free | Prepared / not submitted | Approved contact identity, action-time duplicate/history check, and owner confirmation; optional $99 fast-track excluded | [Submission package](launching-next-submission.md) |
+| Product Hunt | Marketplace | Standard launch is free | Audited / prepared / not submitted / not scheduled | Authorized account history, personal maker identity, approved assets, and exact owner-approved launch date; all advertising excluded | [Route audit](product-hunt-route-audit.md) |
 | Microlaunch | Build Library | Not independently confirmed | Audited / blocked / not submitted | Authenticated Product HQ must explicitly show the Regular route costs $0; paid plans excluded | [Route audit](microlaunch-route-audit.md) |
 | AlternativeTo | Marketplace | Standard review queue | Prepared / not submitted | Sign-in, authenticated duplicate/draft history, and owner confirmation; paid priority review excluded | [Submission package](alternativeto-submission.md) |
 | Dev Hunt | Build Library | Conditional: a week with fewer than 15 tools | Audited / blocked / not submitted | Live authenticated week inventory and draft history; weeks at or above the threshold show $49 | [Route audit](devhunt-route-audit.md) |
