@@ -10,6 +10,8 @@ on:
       - "codemeta.json"
       - "docs/evidence-record.schema.json"
       - "docs/directory-listing.json"
+      - "docs/directory-route-status.json"
+      - "docs/directory-route-status.schema.json"
       - "examples/evidence-record*.json"
       - "scripts/validate_metadata.py"
   pull_request:
@@ -19,6 +21,8 @@ on:
       - "codemeta.json"
       - "docs/evidence-record.schema.json"
       - "docs/directory-listing.json"
+      - "docs/directory-route-status.json"
+      - "docs/directory-route-status.schema.json"
       - "examples/evidence-record*.json"
       - "scripts/validate_metadata.py"
   workflow_dispatch:
