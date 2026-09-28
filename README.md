@@ -71,6 +71,8 @@ For consistent directory submissions, use the [public listing kit](docs/listing-
 
 For the current free Launching Next route, use the [verified submission package](docs/launching-next-submission.md). It remains **Prepared / Not Submitted** until a final duplicate, contact, fee, and approval check is completed.
 
+For Product Hunt, use the [free-launch route audit and owner-review package](docs/product-hunt-route-audit.md). The Marketplace is the proposed product, the Build Library remains separate supporting evidence, advertising is excluded, and the status is **Audited / Prepared / Not Submitted / Not Scheduled**.
+
 For Microlaunch, use the [route audit](docs/microlaunch-route-audit.md). Paid options are verified, but the current public pages do not explicitly confirm that the Regular route is free, so the status remains **Audited / Not Submitted**.
 
 For AlternativeTo, use the [free-queue submission package](docs/alternativeto-submission.md). The Marketplace is the listing target, the Build Library remains separate evidence, and the status is **Prepared / Not Submitted**.
