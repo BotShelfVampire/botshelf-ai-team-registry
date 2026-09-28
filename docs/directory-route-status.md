@@ -56,5 +56,7 @@ The public audits, packages, and this index are completed, externally verifiable
 
 - [Public listing kit](listing-kit.md)
 - [Machine-readable directory manifest](directory-listing.json)
+- [Machine-readable route status](directory-route-status.json)
+- [Route-status JSON Schema](directory-route-status.schema.json)
 - [Evidence-record schema](evidence-record.schema.json)
 - [Visible blocked evaluation](../examples/evidence-record.research-desk-2026-09-10.json)
