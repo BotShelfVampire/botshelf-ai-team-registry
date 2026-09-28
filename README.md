@@ -67,7 +67,7 @@ The [Research Desk failure record](examples/evidence-record.research-desk-2026-0
 
 For an evidence-first overview designed for independent editorial review, see the [public media brief](docs/media-brief.md).
 
-For consistent directory submissions, use the [public listing kit](docs/listing-kit.md), its [machine-readable directory manifest](docs/directory-listing.json), and the [consolidated directory route status](docs/directory-route-status.md). The status index separates verified free paths, paid-only routes, blockers, proposed product surface, and current submission state.
+For consistent directory submissions, use the [public listing kit](docs/listing-kit.md), its [machine-readable directory manifest](docs/directory-listing.json), the [consolidated directory route status](docs/directory-route-status.md), and its [machine-readable status data](docs/directory-route-status.json). The status index separates verified free paths, paid-only routes, blockers, proposed product surface, and current submission state; public CI checks the JSON schema and lifecycle counts.
 
 For the current free Launching Next route, use the [verified submission package](docs/launching-next-submission.md). It remains **Prepared / Not Submitted** until a final duplicate, contact, fee, and approval check is completed.
 
