@@ -10,12 +10,12 @@
     "buildLibrary": "https://botshelfvampire.com/library/",
     "distinct": true
   },
-  "routeCount": 16,
+  "routeCount": 17,
   "summary": {
     "byZeroCostClassification": {
       "verified-free": 10,
       "conditional-free": 1,
-      "unverified": 2,
+      "unverified": 3,
       "temporarily-unavailable": 1,
       "paid-only": 2
     },
@@ -116,6 +116,39 @@
       "audit": {
         "path": "docs/hacker-news-route-audit.md",
         "url": "https://github.com/BotShelfVampire/botshelf-ai-team-registry/blob/main/docs/hacker-news-route-audit.md"
+      },
+      "paidAlternativesExcluded": true,
+      "externalEvidence": {
+        "confirmationReceipt": null,
+        "liveUrl": null
+      }
+    },
+    {
+      "id": "indie-hackers",
+      "name": "Indie Hackers",
+      "proposedSurface": "marketplace",
+      "zeroCostPath": {
+        "classification": "unverified",
+        "description": "The public Products Database exposes Add Your Product and free account creation, but the signed-out pages do not explicitly confirm that adding a product costs $0.",
+        "currentlyActionable": false
+      },
+      "lifecycle": {
+        "audited": true,
+        "prepared": true,
+        "submitted": false,
+        "accepted": false,
+        "published": false
+      },
+      "automation": {
+        "automatedSubmissionPermitted": false,
+        "manualOwnerActionRequired": true,
+        "reason": "The add-product form is account-gated, credentials cannot be shared, and the Terms prohibit crawling or scraping by manual or automated means."
+      },
+      "blocker": "Authenticated form, exact $0 status, account history, owner identity, and final product fields remain unverified.",
+      "nextAction": "Reconsider only in an owner-operated manual session that confirms $0, no duplicate, no default paid option, and Marketplace/Build Library separation.",
+      "audit": {
+        "path": "docs/indie-hackers-route-audit.md",
+        "url": "https://github.com/BotShelfVampire/botshelf-ai-team-registry/blob/main/docs/indie-hackers-route-audit.md"
       },
       "paidAlternativesExcluded": true,
       "externalEvidence": {
